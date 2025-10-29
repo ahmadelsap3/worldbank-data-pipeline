@@ -1,0 +1,1736 @@
+[0m08:33:13.277765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002013E64E660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002013C628CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020140A65E50>]}
+
+
+============================== 08:33:13.604059 | f99c8604-50a1-4ccb-bb52-dfaedf5d558f ==============================
+[0m08:33:13.604059 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:33:13.607577 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps', 'cache_selected_only': 'False', 'no_print': 'None', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m08:33:13.686552 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:33:13.689467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f99c8604-50a1-4ccb-bb52-dfaedf5d558f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000201409E8770>]}
+[0m08:33:13.692859 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:33:13.696998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f99c8604-50a1-4ccb-bb52-dfaedf5d558f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000201409E05A0>]}
+[0m08:33:14.816753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f99c8604-50a1-4ccb-bb52-dfaedf5d558f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002013F85FA50>]}
+[0m08:33:15.012240 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:33:15.017380 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:33:15.021047 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:33:15.039888 [debug] [MainThread]: Command `dbt deps` succeeded at 08:33:15.037564 after 2.59 seconds
+[0m08:33:15.045000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002013F8AF200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020140B56300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002013F987E70>]}
+[0m08:33:15.049607 [debug] [MainThread]: Flushing usage events
+[0m08:33:17.972040 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:33:28.788685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026583A556A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026584754A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026585D0FED0>]}
+
+
+============================== 08:33:28.820920 | 027fcdda-c299-4661-b5e2-dbfb4242a15d ==============================
+[0m08:33:28.820920 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:33:28.823613 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'printer_width': '80', 'no_print': 'None', 'target_path': 'None', 'warn_error': 'None', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'invocation_command': 'dbt run --models fact_aq dim_station dim_parameter stg_openaq', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m08:33:28.825367 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m08:33:28.826969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026585E60D60>]}
+[0m08:33:32.452568 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:33:32.454525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026584CEA030>]}
+[0m08:33:32.456165 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:33:32.457783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026596B11150>]}
+[0m08:33:32.989943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002658380F3E0>]}
+[0m08:33:33.228400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026596D48E50>]}
+[0m08:33:33.233318 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:33:34.493439 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:33:34.497588 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m08:33:34.498751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026596E61E60>]}
+[0m08:33:34.517422 [warn ] [MainThread]: [[33mWARNING[0m][DuplicateYAMLKeysDeprecation]: Deprecated functionality
+Duplicate key 'version' in "<unicode string>", line 24, column 1 in file
+`models\schema.yml`
+[0m08:33:34.518846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '027fcdda-c299-4661-b5e2-dbfb4242a15d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026596E796D0>]}
+[0m08:33:37.930509 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'stg_hotels_osm' in the 'models' section of file 'models\schema.yml'
+[0m08:33:37.933769 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_hotels' in the 'models' section of file 'models\schema.yml'
+[0m08:33:38.546964 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.hotels_egypt_project.stg_openaq' (models\staging\stg_openaq.sql) depends on a source named 'local.openaq_stream' which was not found
+[0m08:33:38.548618 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+- DuplicateYAMLKeysDeprecation: 3 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:33:38.550835 [debug] [MainThread]: Command `dbt run` failed at 08:33:38.550559 after 10.20 seconds
+[0m08:33:38.551634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026597123330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000265970A20D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026597157BB0>]}
+[0m08:33:38.552444 [debug] [MainThread]: Flushing usage events
+[0m08:33:39.994924 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:35:05.350301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449E0756A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449ED6CA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449F34FED0>]}
+
+
+============================== 08:35:05.373726 | 20f172d5-3517-4d68-a0b6-7fc631921e03 ==============================
+[0m08:35:05.373726 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:35:05.375187 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'write_json': 'True', 'printer_width': '80', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt deps', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m08:35:05.393865 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:35:05.395116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '20f172d5-3517-4d68-a0b6-7fc631921e03', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000144A047E2C0>]}
+[0m08:35:05.396520 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:35:05.397838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '20f172d5-3517-4d68-a0b6-7fc631921e03', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449F2FB130>]}
+[0m08:35:05.778902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20f172d5-3517-4d68-a0b6-7fc631921e03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449F2FF050>]}
+[0m08:35:05.832371 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:35:05.835368 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:35:05.836661 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:35:05.838839 [debug] [MainThread]: Command `dbt deps` succeeded at 08:35:05.838571 after 0.86 seconds
+[0m08:35:05.839628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449F3419A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000144A0618AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001449F347E70>]}
+[0m08:35:05.840463 [debug] [MainThread]: Flushing usage events
+[0m08:35:07.271689 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:35:14.064047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C76756A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C8364A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C991FED0>]}
+
+
+============================== 08:35:14.080206 | a568d18c-d5cc-40b3-85b0-f6c6303bdc8c ==============================
+[0m08:35:14.080206 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:35:14.081340 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --models fact_aq dim_station dim_parameter stg_openaq', 'warn_error': 'None', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m08:35:14.082091 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m08:35:14.082785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C9A70D60>]}
+[0m08:35:15.869719 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:35:15.870829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C88FA030>]}
+[0m08:35:15.871767 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:35:15.872533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DA7A1150>]}
+[0m08:35:16.233208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C742F3E0>]}
+[0m08:35:16.385742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DA9D8E50>]}
+[0m08:35:16.388191 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:35:17.412588 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:35:17.415165 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m08:35:17.416198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DAAF1E60>]}
+[0m08:35:19.941654 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'stg_hotels_osm' in the 'models' section of file 'models\schema.yml'
+[0m08:35:19.944334 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_hotels' in the 'models' section of file 'models\schema.yml'
+[0m08:35:20.224078 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m08:35:20.225122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DAD91D90>]}
+[0m08:35:20.581626 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.not_null_stg_hotels_osm_osm_id.6820e1b9a4' (models\schema.yml) depends on a node named 'stg_hotels_osm' in package '' which was not found
+[0m08:35:20.582755 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.unique_stg_hotels_osm_osm_id.b86bc2c25a' (models\schema.yml) depends on a node named 'stg_hotels_osm' in package '' which was not found
+[0m08:35:20.583623 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.not_null_stg_hotels_osm_name.292e057769' (models\schema.yml) depends on a node named 'stg_hotels_osm' in package '' which was not found
+[0m08:35:20.584441 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.not_null_fact_hotels_osm_id.913fee9cf3' (models\schema.yml) depends on a node named 'fact_hotels' in package '' which was not found
+[0m08:35:20.825634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DADA7E30>]}
+[0m08:35:21.029767 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:35:21.041876 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:35:21.133597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DB1062B0>]}
+[0m08:35:21.134931 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 492 macros
+[0m08:35:21.136184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a568d18c-d5cc-40b3-85b0-f6c6303bdc8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DAE983D0>]}
+[0m08:35:21.141768 [info ] [MainThread]: 
+[0m08:35:21.142750 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:35:21.143594 [info ] [MainThread]: 
+[0m08:35:21.145034 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m08:35:21.159489 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_<YOUR_DATABASE>'
+[0m08:35:21.393426 [debug] [ThreadPool]: Using snowflake connection "list_<YOUR_DATABASE>"
+[0m08:35:21.394376 [debug] [ThreadPool]: On list_<YOUR_DATABASE>: show terse schemas in database <YOUR_DATABASE>
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_<YOUR_DATABASE>"} */
+[0m08:35:21.395112 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:35:23.962896 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c0070f-0206-d0b5-0000-0015aa4790cd
+[0m08:35:23.963707 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 1 at position 31 unexpected '<'.
+[0m08:35:23.964631 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m08:35:23.965343 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m08:35:23.970828 [debug] [ThreadPool]: Using snowflake connection "list_<YOUR_DATABASE>"
+[0m08:35:23.972109 [debug] [ThreadPool]: On list_<YOUR_DATABASE>: show terse schemas in database <YOUR_DATABASE>
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_<YOUR_DATABASE>"} */
+[0m08:35:24.328131 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c0070f-0206-d1fe-0000-0015aa474105
+[0m08:35:24.328929 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 1 at position 31 unexpected '<'.
+[0m08:35:24.329712 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m08:35:24.330371 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m08:35:24.334514 [debug] [ThreadPool]: Using snowflake connection "list_<YOUR_DATABASE>"
+[0m08:35:24.336001 [debug] [ThreadPool]: On list_<YOUR_DATABASE>: show terse schemas in database <YOUR_DATABASE>
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_<YOUR_DATABASE>"} */
+[0m08:35:24.674756 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c0070f-0206-d0b4-0000-0015aa47c0d9
+[0m08:35:24.675475 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 1 at position 31 unexpected '<'.
+[0m08:35:24.676301 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m08:35:24.676907 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m08:35:24.678284 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:35:24.678822 [debug] [MainThread]: Connection 'list_<YOUR_DATABASE>' was left open.
+[0m08:35:24.679301 [debug] [MainThread]: On list_<YOUR_DATABASE>: Close
+[0m08:35:25.235336 [info ] [MainThread]: 
+[0m08:35:25.236465 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 4.09 seconds (4.09s).
+[0m08:35:25.237459 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "<YOUR_DATABASE>"
+  Database Error
+    001003 (42000): SQL compilation error:
+    syntax error line 1 at position 31 unexpected '<'.
+[0m08:35:25.238818 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:35:25.241069 [debug] [MainThread]: Command `dbt run` failed at 08:35:25.240799 after 11.48 seconds
+[0m08:35:25.241895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C9A652B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C2224C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DB604CB0>]}
+[0m08:35:25.242589 [debug] [MainThread]: Flushing usage events
+[0m08:35:26.652875 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:35:54.723554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B84E0D400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B85AFC7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B860D7ED0>]}
+
+
+============================== 08:35:54.745009 | 98838012-fc49-4ccc-8c18-061e6126864c ==============================
+[0m08:35:54.745009 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:35:54.746856 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'log_format': 'default', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt debug --config-dir', 'printer_width': '80', 'write_json': 'True'}
+[0m08:35:54.895119 [info ] [MainThread]: To view your profiles.yml file, run:
+
+start C:\Users\ahmad\.dbt
+[0m08:35:54.898917 [debug] [MainThread]: Command `dbt debug` succeeded at 08:35:54.898427 after 0.62 seconds
+[0m08:35:54.900522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B87212190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B8721C5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B8608A250>]}
+[0m08:35:54.901999 [debug] [MainThread]: Flushing usage events
+[0m08:35:56.410967 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:36:10.876649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB36D3D400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB37A1C7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB37FF7ED0>]}
+
+
+============================== 08:36:10.901204 | 8113e252-ff8d-4e6b-a270-9eead752c140 ==============================
+[0m08:36:10.901204 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:36:10.903020 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'log_format': 'default', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m08:36:10.955052 [info ] [MainThread]: dbt version: 1.10.13
+[0m08:36:10.956682 [info ] [MainThread]: python version: 3.13.3
+[0m08:36:10.957948 [info ] [MainThread]: python path: C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\venv\Scripts\python.exe
+[0m08:36:10.959169 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m08:36:12.955940 [info ] [MainThread]: Using profiles dir at C:\Users\ahmad\.dbt
+[0m08:36:12.957422 [info ] [MainThread]: Using profiles.yml file at C:\Users\ahmad\.dbt\profiles.yml
+[0m08:36:12.958453 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\dbt_project.yml
+[0m08:36:12.960593 [info ] [MainThread]: adapter type: snowflake
+[0m08:36:12.961864 [info ] [MainThread]: adapter version: 1.10.2
+[0m08:36:12.976844 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:36:12.978593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8113e252-ff8d-4e6b-a270-9eead752c140', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB4A0115B0>]}
+[0m08:36:12.980900 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:36:12.982487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8113e252-ff8d-4e6b-a270-9eead752c140', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB37FAACF0>]}
+[0m08:36:13.236270 [info ] [MainThread]: Configuration:
+[0m08:36:13.237557 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:36:13.238584 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:36:13.239506 [info ] [MainThread]: Required dependencies:
+[0m08:36:13.240367 [debug] [MainThread]: Executing "git --help"
+[0m08:36:13.326724 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:36:13.327843 [debug] [MainThread]: STDERR: "b''"
+[0m08:36:13.329108 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:36:13.331033 [info ] [MainThread]: Connection:
+[0m08:36:13.332293 [info ] [MainThread]:   account: POKMPXO-ICB41863
+[0m08:36:13.333213 [info ] [MainThread]:   user: AHMEDEHAB
+[0m08:36:13.334208 [info ] [MainThread]:   database: <YOUR_DATABASE>
+[0m08:36:13.335151 [info ] [MainThread]:   warehouse: <YOUR_WAREHOUSE>
+[0m08:36:13.336369 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m08:36:13.337405 [info ] [MainThread]:   schema: PUBLIC
+[0m08:36:13.338330 [info ] [MainThread]:   authenticator: None
+[0m08:36:13.339256 [info ] [MainThread]:   oauth_client_id: None
+[0m08:36:13.340237 [info ] [MainThread]:   query_tag: None
+[0m08:36:13.341277 [info ] [MainThread]:   client_session_keep_alive: False
+[0m08:36:13.342450 [info ] [MainThread]:   host: None
+[0m08:36:13.343614 [info ] [MainThread]:   port: None
+[0m08:36:13.344551 [info ] [MainThread]:   proxy_host: None
+[0m08:36:13.345750 [info ] [MainThread]:   proxy_port: None
+[0m08:36:13.347345 [info ] [MainThread]:   protocol: None
+[0m08:36:13.348575 [info ] [MainThread]:   connect_retries: 1
+[0m08:36:13.349859 [info ] [MainThread]:   connect_timeout: None
+[0m08:36:13.351124 [info ] [MainThread]:   retry_on_database_errors: False
+[0m08:36:13.352175 [info ] [MainThread]:   retry_all: False
+[0m08:36:13.353198 [info ] [MainThread]:   insecure_mode: False
+[0m08:36:13.354429 [info ] [MainThread]:   reuse_connections: True
+[0m08:36:13.355459 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m08:36:13.356867 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:36:14.442069 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m08:36:14.610314 [debug] [MainThread]: Using snowflake connection "debug"
+[0m08:36:14.611387 [debug] [MainThread]: On debug: select 1 as id
+[0m08:36:14.612779 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:36:16.917184 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.304 seconds
+[0m08:36:16.921269 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:36:16.923434 [info ] [MainThread]: [32mAll checks passed![0m
+[0m08:36:16.926144 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:36:16.932126 [debug] [MainThread]: Command `dbt debug` succeeded at 08:36:16.931620 after 6.49 seconds
+[0m08:36:16.933571 [debug] [MainThread]: Connection 'debug' was left open.
+[0m08:36:16.934803 [debug] [MainThread]: On debug: Close
+[0m08:36:17.463292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB4A674650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB4A674050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB37817E30>]}
+[0m08:36:17.464691 [debug] [MainThread]: Flushing usage events
+[0m08:36:18.988952 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:36:43.931806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBEF88D400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBF056C7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBF0B47ED0>]}
+
+
+============================== 08:36:43.951651 | c3bad10b-1e63-4690-9497-a44d48290edc ==============================
+[0m08:36:43.951651 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:36:43.953762 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'invocation_command': 'dbt debug --connection', 'write_json': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m08:36:44.000587 [info ] [MainThread]: dbt version: 1.10.13
+[0m08:36:44.002246 [info ] [MainThread]: python version: 3.13.3
+[0m08:36:44.003618 [info ] [MainThread]: python path: C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\venv\Scripts\python.exe
+[0m08:36:44.004974 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m08:36:46.001895 [info ] [MainThread]: Using profiles dir at C:\Users\ahmad\.dbt
+[0m08:36:46.003490 [info ] [MainThread]: Using profiles.yml file at C:\Users\ahmad\.dbt\profiles.yml
+[0m08:36:46.004924 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\dbt_project.yml
+[0m08:36:46.008031 [info ] [MainThread]: adapter type: snowflake
+[0m08:36:46.011869 [info ] [MainThread]: adapter version: 1.10.2
+[0m08:36:46.028270 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:36:46.030325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'c3bad10b-1e63-4690-9497-a44d48290edc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB82C115B0>]}
+[0m08:36:46.031994 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:36:46.033573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'c3bad10b-1e63-4690-9497-a44d48290edc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB82BA5370>]}
+[0m08:36:46.337689 [info ] [MainThread]: Skipping steps before connection verification
+[0m08:36:46.339236 [info ] [MainThread]: Connection:
+[0m08:36:46.340709 [info ] [MainThread]:   account: POKMPXO-ICB41863
+[0m08:36:46.342071 [info ] [MainThread]:   user: AHMEDEHAB
+[0m08:36:46.343957 [info ] [MainThread]:   database: ANALYTICS_DB
+[0m08:36:46.345249 [info ] [MainThread]:   warehouse: ANALYTICS_WH
+[0m08:36:46.347070 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m08:36:46.348282 [info ] [MainThread]:   schema: RAW
+[0m08:36:46.349883 [info ] [MainThread]:   authenticator: None
+[0m08:36:46.350952 [info ] [MainThread]:   oauth_client_id: None
+[0m08:36:46.352075 [info ] [MainThread]:   query_tag: dbt_hotels_egypt
+[0m08:36:46.353473 [info ] [MainThread]:   client_session_keep_alive: False
+[0m08:36:46.354728 [info ] [MainThread]:   host: None
+[0m08:36:46.355968 [info ] [MainThread]:   port: None
+[0m08:36:46.357235 [info ] [MainThread]:   proxy_host: None
+[0m08:36:46.358669 [info ] [MainThread]:   proxy_port: None
+[0m08:36:46.360599 [info ] [MainThread]:   protocol: None
+[0m08:36:46.362043 [info ] [MainThread]:   connect_retries: 1
+[0m08:36:46.363953 [info ] [MainThread]:   connect_timeout: None
+[0m08:36:46.366687 [info ] [MainThread]:   retry_on_database_errors: False
+[0m08:36:46.367945 [info ] [MainThread]:   retry_all: False
+[0m08:36:46.369839 [info ] [MainThread]:   insecure_mode: False
+[0m08:36:46.371132 [info ] [MainThread]:   reuse_connections: True
+[0m08:36:46.372597 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m08:36:46.374302 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:36:47.617899 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m08:36:47.878412 [debug] [MainThread]: Using snowflake connection "debug"
+[0m08:36:47.879417 [debug] [MainThread]: On debug: select 1 as id
+[0m08:36:47.880224 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:36:50.243938 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.364 seconds
+[0m08:36:50.246089 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:36:50.247707 [info ] [MainThread]: [32mAll checks passed![0m
+[0m08:36:50.249325 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:36:50.251819 [debug] [MainThread]: Command `dbt debug` succeeded at 08:36:50.251555 after 6.66 seconds
+[0m08:36:50.252443 [debug] [MainThread]: Connection 'debug' was left open.
+[0m08:36:50.253115 [debug] [MainThread]: On debug: Close
+[0m08:36:50.811461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB83274750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB83274650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB82B67980>]}
+[0m08:36:50.812291 [debug] [MainThread]: Flushing usage events
+[0m08:36:54.584674 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:37:27.453550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A5F256A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A6C1CA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A71FFED0>]}
+
+
+============================== 08:37:27.476453 | 01ef6027-10e1-428e-b070-49f5ef51fd08 ==============================
+[0m08:37:27.476453 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:37:27.478601 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps', 'log_format': 'default', 'no_print': 'None', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m08:37:27.499522 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:37:27.501716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '01ef6027-10e1-428e-b070-49f5ef51fd08', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A833A2C0>]}
+[0m08:37:27.503206 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:37:27.504231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '01ef6027-10e1-428e-b070-49f5ef51fd08', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A71AB130>]}
+[0m08:37:28.008861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '01ef6027-10e1-428e-b070-49f5ef51fd08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A71AF050>]}
+[0m08:37:28.077503 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:37:28.081541 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:37:28.084436 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:37:28.087139 [debug] [MainThread]: Command `dbt deps` succeeded at 08:37:28.086801 after 0.97 seconds
+[0m08:37:28.088064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A71E99A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A84B8AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A71F7E70>]}
+[0m08:37:28.089084 [debug] [MainThread]: Flushing usage events
+[0m08:37:29.534200 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:37:36.232499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297A53A56A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297A60ACA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297A668FED0>]}
+
+
+============================== 08:37:36.254063 | e7ec62be-8009-43af-ad80-a405db48f2f3 ==============================
+[0m08:37:36.254063 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:37:36.255531 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'use_colors': 'True', 'log_format': 'default', 'write_json': 'True', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --models fact_aq dim_station dim_parameter stg_openaq', 'printer_width': '80', 'target_path': 'None'}
+[0m08:37:36.256572 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m08:37:36.257552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297A77B8D60>]}
+[0m08:37:38.173595 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:37:38.174726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B856E7A0>]}
+[0m08:37:38.176374 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:37:38.177940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B8545150>]}
+[0m08:37:38.562027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297A515F3E0>]}
+[0m08:37:38.722090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B8774E50>]}
+[0m08:37:38.724576 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:37:39.711221 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:37:39.941588 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m08:37:39.943242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B8892340>]}
+[0m08:37:42.793167 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'stg_hotels_osm' in the 'models' section of file 'models\schema.yml'
+[0m08:37:42.796158 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_hotels' in the 'models' section of file 'models\schema.yml'
+[0m08:37:43.055389 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m08:37:43.057758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B8ACB590>]}
+[0m08:37:43.368815 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.not_null_stg_hotels_osm_osm_id.6820e1b9a4' (models\schema.yml) depends on a node named 'stg_hotels_osm' in package '' which was not found
+[0m08:37:43.370025 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.unique_stg_hotels_osm_osm_id.b86bc2c25a' (models\schema.yml) depends on a node named 'stg_hotels_osm' in package '' which was not found
+[0m08:37:43.370927 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.not_null_stg_hotels_osm_name.292e057769' (models\schema.yml) depends on a node named 'stg_hotels_osm' in package '' which was not found
+[0m08:37:43.372086 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.hotels_egypt_project.not_null_fact_hotels_osm_id.913fee9cf3' (models\schema.yml) depends on a node named 'fact_hotels' in package '' which was not found
+[0m08:37:43.596452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B8AD6360>]}
+[0m08:37:43.816599 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:37:43.824399 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:37:43.899995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B89F2D50>]}
+[0m08:37:43.901029 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 492 macros
+[0m08:37:43.901785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297A6671050>]}
+[0m08:37:43.905833 [info ] [MainThread]: 
+[0m08:37:43.907382 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:37:43.908076 [info ] [MainThread]: 
+[0m08:37:43.909261 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m08:37:43.920845 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:37:43.940817 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:37:43.957725 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:37:44.217968 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:37:44.219080 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:37:44.219845 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:37:44.220911 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:37:44.221924 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:37:44.223346 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:37:44.224218 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:37:44.224969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:37:44.225963 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:37:47.086881 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.862 seconds
+[0m08:37:47.151686 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.928 seconds
+[0m08:37:47.220661 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.994 seconds
+[0m08:37:47.227527 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ANALYTICS_DB, now create_ANALYTICS_DB_RAW_marts)
+[0m08:37:47.229852 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ANALYTICS_DB, now create_ANALYTICS_DB_RAW_staging)
+[0m08:37:47.232681 [debug] [ThreadPool]: Creating schema "database: "ANALYTICS_DB"
+schema: "RAW_marts"
+"
+[0m08:37:47.234914 [debug] [ThreadPool]: Creating schema "database: "ANALYTICS_DB"
+schema: "RAW_staging"
+"
+[0m08:37:47.255980 [debug] [ThreadPool]: Using snowflake connection "create_ANALYTICS_DB_RAW_marts"
+[0m08:37:47.267900 [debug] [ThreadPool]: Using snowflake connection "create_ANALYTICS_DB_RAW_staging"
+[0m08:37:47.270476 [debug] [ThreadPool]: On create_ANALYTICS_DB_RAW_marts: create schema if not exists ANALYTICS_DB.RAW_marts
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "create_ANALYTICS_DB_RAW_marts"} */
+[0m08:37:47.272715 [debug] [ThreadPool]: On create_ANALYTICS_DB_RAW_staging: create schema if not exists ANALYTICS_DB.RAW_staging
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "create_ANALYTICS_DB_RAW_staging"} */
+[0m08:37:47.667662 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.392 seconds
+[0m08:37:47.702522 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.427 seconds
+[0m08:37:47.710746 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_marts'
+[0m08:37:47.743555 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW'
+[0m08:37:47.767480 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_marts"
+[0m08:37:47.779214 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW"
+[0m08:37:47.781562 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_staging'
+[0m08:37:47.783256 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_marts: show objects in ANALYTICS_DB.RAW_marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_marts"} */;
+[0m08:37:47.785082 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW: show objects in ANALYTICS_DB.RAW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW"} */;
+[0m08:37:47.794094 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_staging"
+[0m08:37:47.795892 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:37:47.797506 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:37:47.799141 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_staging: show objects in ANALYTICS_DB.RAW_staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_staging"} */;
+[0m08:37:47.802513 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:37:49.454654 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.652 seconds
+[0m08:37:49.647523 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.852 seconds
+[0m08:37:49.692563 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.895 seconds
+[0m08:37:49.698519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B8F727B0>]}
+[0m08:37:49.717218 [debug] [Thread-1 (]: Began running node model.hotels_egypt_project.stg_openaq
+[0m08:37:49.719580 [info ] [Thread-1 (]: 1 of 4 START sql view model RAW_staging.stg_openaq ............................. [RUN]
+[0m08:37:49.721461 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.stg_openaq'
+[0m08:37:49.722353 [debug] [Thread-1 (]: Began compiling node model.hotels_egypt_project.stg_openaq
+[0m08:37:49.742311 [debug] [Thread-1 (]: Writing injected SQL for node "model.hotels_egypt_project.stg_openaq"
+[0m08:37:49.747988 [debug] [Thread-1 (]: Began executing node model.hotels_egypt_project.stg_openaq
+[0m08:37:49.833914 [debug] [Thread-1 (]: Writing runtime sql for node "model.hotels_egypt_project.stg_openaq"
+[0m08:37:49.842507 [debug] [Thread-1 (]: Using snowflake connection "model.hotels_egypt_project.stg_openaq"
+[0m08:37:49.843709 [debug] [Thread-1 (]: On model.hotels_egypt_project.stg_openaq: create or replace   view ANALYTICS_DB.RAW_staging.stg_openaq
+  
+  
+  
+  
+  as (
+    -- staging: expects a source/table `local.openaq_stream` with columns matching the NDJSON keys
+with raw as (
+    select
+        measurement_id,
+        location,
+        city,
+        country,
+        parameter,
+        value,
+        unit,
+        latitude,
+        longitude,
+        date_utc as measured_at,
+        fetched_at
+    from ANALYTICS_DB.RAW.OPENAQ_STREAM
+)
+
+select * from raw
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.stg_openaq"} */;
+[0m08:37:49.844643 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:37:51.175254 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c00711-0206-d201-0000-0015aa472149
+[0m08:37:51.176737 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 10 at position 8
+invalid identifier 'MEASUREMENT_ID'
+[0m08:37:51.199466 [debug] [Thread-1 (]: Database Error in model stg_openaq (models\staging\stg_openaq.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 8
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\staging\stg_openaq.sql
+[0m08:37:51.207698 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7ec62be-8009-43af-ad80-a405db48f2f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B9F53CB0>]}
+[0m08:37:51.209567 [error] [Thread-1 (]: 1 of 4 ERROR creating sql view model RAW_staging.stg_openaq .................... [[31mERROR[0m in 1.48s]
+[0m08:37:51.212353 [debug] [Thread-1 (]: Finished running node model.hotels_egypt_project.stg_openaq
+[0m08:37:51.214418 [debug] [Thread-7 (]: Marking all children of 'model.hotels_egypt_project.stg_openaq' to be skipped because of status 'error'.  Reason: Database Error in model stg_openaq (models\staging\stg_openaq.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 8
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\staging\stg_openaq.sql.
+[0m08:37:51.219744 [debug] [Thread-2 (]: Began running node model.hotels_egypt_project.dim_parameter
+[0m08:37:51.221773 [debug] [Thread-3 (]: Began running node model.hotels_egypt_project.dim_station
+[0m08:37:51.223153 [debug] [Thread-4 (]: Began running node model.hotels_egypt_project.fact_aq
+[0m08:37:51.224927 [info ] [Thread-2 (]: 2 of 4 SKIP relation RAW.dim_parameter ......................................... [[33mSKIP[0m]
+[0m08:37:51.226995 [info ] [Thread-3 (]: 3 of 4 SKIP relation RAW.dim_station ........................................... [[33mSKIP[0m]
+[0m08:37:51.229901 [debug] [Thread-2 (]: Finished running node model.hotels_egypt_project.dim_parameter
+[0m08:37:51.228563 [info ] [Thread-4 (]: 4 of 4 SKIP relation RAW_marts.fact_aq ......................................... [[33mSKIP[0m]
+[0m08:37:51.231691 [debug] [Thread-3 (]: Finished running node model.hotels_egypt_project.dim_station
+[0m08:37:51.233489 [debug] [Thread-4 (]: Finished running node model.hotels_egypt_project.fact_aq
+[0m08:37:51.239055 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:37:51.240328 [debug] [MainThread]: Connection 'create_ANALYTICS_DB_RAW_staging' was left open.
+[0m08:37:51.241470 [debug] [MainThread]: On create_ANALYTICS_DB_RAW_staging: Close
+[0m08:37:51.759018 [debug] [MainThread]: Connection 'create_ANALYTICS_DB_RAW_marts' was left open.
+[0m08:37:51.760322 [debug] [MainThread]: On create_ANALYTICS_DB_RAW_marts: Close
+[0m08:37:52.304476 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:37:52.305427 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:37:52.930076 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_marts' was left open.
+[0m08:37:52.931434 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_marts: Close
+[0m08:37:53.520958 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW' was left open.
+[0m08:37:53.522213 [debug] [MainThread]: On list_ANALYTICS_DB_RAW: Close
+[0m08:37:54.059486 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_staging' was left open.
+[0m08:37:54.060393 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_staging: Close
+[0m08:37:54.627995 [debug] [MainThread]: Connection 'model.hotels_egypt_project.stg_openaq' was left open.
+[0m08:37:54.628958 [debug] [MainThread]: On model.hotels_egypt_project.stg_openaq: Close
+[0m08:37:55.177569 [info ] [MainThread]: 
+[0m08:37:55.178780 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 11.27 seconds (11.27s).
+[0m08:37:55.180351 [debug] [MainThread]: Command end result
+[0m08:37:55.227427 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:37:55.233120 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:37:55.245243 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\run_results.json
+[0m08:37:55.245963 [info ] [MainThread]: 
+[0m08:37:55.246883 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m08:37:55.247626 [info ] [MainThread]: 
+[0m08:37:55.248511 [error] [MainThread]: [31mFailure in model stg_openaq (models\staging\stg_openaq.sql)[0m
+[0m08:37:55.249825 [error] [MainThread]:   Database Error in model stg_openaq (models\staging\stg_openaq.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 8
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\staging\stg_openaq.sql
+[0m08:37:55.250966 [info ] [MainThread]: 
+[0m08:37:55.252011 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\staging\stg_openaq.sql
+[0m08:37:55.252656 [info ] [MainThread]: 
+[0m08:37:55.253346 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=3 NO-OP=0 TOTAL=4
+[0m08:37:55.254886 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:37:55.257812 [debug] [MainThread]: Command `dbt run` failed at 08:37:55.257308 after 19.34 seconds
+[0m08:37:55.258756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002979FD72AB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B9EB3F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297B9EA7C50>]}
+[0m08:37:55.259967 [debug] [MainThread]: Flushing usage events
+[0m08:37:56.772568 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:39:34.670565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000142369B56A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000142376BCA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014237CA7ED0>]}
+
+
+============================== 08:39:34.699378 | 3f9439c4-8866-41ae-b393-69457775f7e3 ==============================
+[0m08:39:34.699378 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:39:34.701546 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt deps', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m08:39:34.723535 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:39:34.725014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3f9439c4-8866-41ae-b393-69457775f7e3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014238DD62C0>]}
+[0m08:39:34.726376 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:39:34.728078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3f9439c4-8866-41ae-b393-69457775f7e3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014237C47130>]}
+[0m08:39:35.146407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3f9439c4-8866-41ae-b393-69457775f7e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014237C4F050>]}
+[0m08:39:35.235482 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:39:35.240131 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:39:35.242636 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:39:35.247090 [debug] [MainThread]: Command `dbt deps` succeeded at 08:39:35.246562 after 0.96 seconds
+[0m08:39:35.248179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014237C959A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014238F50AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014237C9FE70>]}
+[0m08:39:35.249437 [debug] [MainThread]: Flushing usage events
+[0m08:39:37.261547 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:39:43.993192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DF37656A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DF446CA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DF4A4FED0>]}
+
+
+============================== 08:39:44.013425 | 04ac4144-6959-4465-8b37-564915960c45 ==============================
+[0m08:39:44.013425 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:39:44.014642 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'printer_width': '80', 'invocation_command': 'dbt test', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m08:39:46.178613 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:39:46.180268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D85933950>]}
+[0m08:39:46.181726 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:39:46.182989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D869DE690>]}
+[0m08:39:46.607923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D869B1650>]}
+[0m08:39:46.811422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DF4A34230>]}
+[0m08:39:46.815449 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:39:47.984720 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:39:48.506058 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:39:48.507343 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:39:48.662387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D86EB3150>]}
+[0m08:39:48.949219 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:39:48.960696 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:39:49.105323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D87115B20>]}
+[0m08:39:49.107304 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 492 macros
+[0m08:39:49.108751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D87109310>]}
+[0m08:39:49.114138 [info ] [MainThread]: 
+[0m08:39:49.115243 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:39:49.116177 [info ] [MainThread]: 
+[0m08:39:49.118025 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m08:39:49.131789 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_staging'
+[0m08:39:49.149901 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_marts'
+[0m08:39:49.180398 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW'
+[0m08:39:49.519480 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_staging"
+[0m08:39:49.521361 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_marts"
+[0m08:39:49.522683 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW"
+[0m08:39:49.523677 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_staging: show objects in ANALYTICS_DB.RAW_staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_staging"} */;
+[0m08:39:49.524631 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_marts: show objects in ANALYTICS_DB.RAW_marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_marts"} */;
+[0m08:39:49.525615 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW: show objects in ANALYTICS_DB.RAW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW"} */;
+[0m08:39:49.526774 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:39:49.527973 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:39:49.528918 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:39:52.723970 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 3.195 seconds
+[0m08:39:52.812623 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 3.286 seconds
+[0m08:39:52.887528 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 3.359 seconds
+[0m08:39:52.892313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04ac4144-6959-4465-8b37-564915960c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D88929700>]}
+[0m08:39:52.909173 [debug] [Thread-3 (]: Began running node test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8
+[0m08:39:52.910383 [debug] [Thread-4 (]: Began running node test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f
+[0m08:39:52.911361 [debug] [Thread-1 (]: Began running node test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea
+[0m08:39:52.912267 [debug] [Thread-2 (]: Began running node test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b
+[0m08:39:52.913216 [info ] [Thread-3 (]: 3 of 4 START test not_null_stg_openaq_measurement_id ........................... [RUN]
+[0m08:39:52.914315 [info ] [Thread-4 (]: 4 of 4 START test relationships_fact_aq_location__ref_dim_station_ ............. [RUN]
+[0m08:39:52.915426 [info ] [Thread-1 (]: 1 of 4 START test not_null_fact_aq_measurement_id .............................. [RUN]
+[0m08:39:52.916974 [info ] [Thread-2 (]: 2 of 4 START test not_null_stg_openaq_measured_at .............................. [RUN]
+[0m08:39:52.918659 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8'
+[0m08:39:52.920210 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f'
+[0m08:39:52.921447 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea'
+[0m08:39:52.922776 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b'
+[0m08:39:52.923751 [debug] [Thread-3 (]: Began compiling node test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8
+[0m08:39:52.924708 [debug] [Thread-4 (]: Began compiling node test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f
+[0m08:39:52.925655 [debug] [Thread-1 (]: Began compiling node test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea
+[0m08:39:52.926590 [debug] [Thread-2 (]: Began compiling node test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b
+[0m08:39:52.983365 [debug] [Thread-3 (]: Writing injected SQL for node "test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8"
+[0m08:39:52.987724 [debug] [Thread-4 (]: Writing injected SQL for node "test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f"
+[0m08:39:52.996728 [debug] [Thread-1 (]: Writing injected SQL for node "test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea"
+[0m08:39:53.006561 [debug] [Thread-2 (]: Writing injected SQL for node "test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b"
+[0m08:39:53.011846 [debug] [Thread-3 (]: Began executing node test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8
+[0m08:39:53.013017 [debug] [Thread-1 (]: Began executing node test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea
+[0m08:39:53.091183 [debug] [Thread-2 (]: Began executing node test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b
+[0m08:39:53.105275 [debug] [Thread-1 (]: Writing runtime sql for node "test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea"
+[0m08:39:53.112872 [debug] [Thread-2 (]: Writing runtime sql for node "test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b"
+[0m08:39:53.115169 [debug] [Thread-3 (]: Writing runtime sql for node "test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8"
+[0m08:39:53.116839 [debug] [Thread-4 (]: Began executing node test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f
+[0m08:39:53.123905 [debug] [Thread-4 (]: Writing runtime sql for node "test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f"
+[0m08:39:53.127957 [debug] [Thread-4 (]: Using snowflake connection "test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f"
+[0m08:39:53.129895 [debug] [Thread-1 (]: Using snowflake connection "test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea"
+[0m08:39:53.131128 [debug] [Thread-4 (]: On test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select  as from_field
+    from ANALYTICS_DB.RAW_marts.fact_aq
+    where  is not null
+),
+
+parent as (
+    select location as to_field
+    from ANALYTICS_DB.RAW.dim_station
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f"} */
+[0m08:39:53.133089 [debug] [Thread-1 (]: On test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select measurement_id
+from ANALYTICS_DB.RAW_marts.fact_aq
+where measurement_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea"} */
+[0m08:39:53.135140 [debug] [Thread-2 (]: Using snowflake connection "test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b"
+[0m08:39:53.136237 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m08:39:53.138040 [debug] [Thread-3 (]: Using snowflake connection "test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8"
+[0m08:39:53.139078 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:39:53.140195 [debug] [Thread-2 (]: On test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select measured_at
+from ANALYTICS_DB.RAW_staging.stg_openaq
+where measured_at is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b"} */
+[0m08:39:53.142005 [debug] [Thread-3 (]: On test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select measurement_id
+from ANALYTICS_DB.RAW_staging.stg_openaq
+where measurement_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8"} */
+[0m08:39:53.143745 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:39:53.145002 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:39:55.168318 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c00713-0206-d0eb-0000-0015aa477109
+[0m08:39:55.169346 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'ANALYTICS_DB.RAW_MARTS.FACT_AQ' does not exist or not authorized.
+[0m08:39:55.177587 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c00713-0206-d17a-0000-0015aa475131
+[0m08:39:55.178907 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 13 at position 12 unexpected 'as'.
+syntax error line 15 at position 11 unexpected 'is'.
+[0m08:39:55.198552 [debug] [Thread-1 (]: Database Error in test not_null_fact_aq_measurement_id (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_MARTS.FACT_AQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_fact_aq_measurement_id.sql
+[0m08:39:55.200795 [error] [Thread-1 (]: 1 of 4 ERROR not_null_fact_aq_measurement_id ................................... [[31mERROR[0m in 2.28s]
+[0m08:39:55.203100 [debug] [Thread-1 (]: Finished running node test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea
+[0m08:39:55.206495 [debug] [Thread-7 (]: Marking all children of 'test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea' to be skipped because of status 'error'.  Reason: Database Error in test not_null_fact_aq_measurement_id (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_MARTS.FACT_AQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_fact_aq_measurement_id.sql.
+[0m08:39:55.221910 [debug] [Thread-4 (]: Database Error in test relationships_fact_aq_location__ref_dim_station_ (models\schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 12 unexpected 'as'.
+  syntax error line 15 at position 11 unexpected 'is'.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\relationships_fact_aq_location__ref_dim_station_.sql
+[0m08:39:55.223575 [error] [Thread-4 (]: 4 of 4 ERROR relationships_fact_aq_location__ref_dim_station_ .................. [[31mERROR[0m in 2.30s]
+[0m08:39:55.225127 [debug] [Thread-4 (]: Finished running node test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f
+[0m08:39:55.226802 [debug] [Thread-7 (]: Marking all children of 'test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f' to be skipped because of status 'error'.  Reason: Database Error in test relationships_fact_aq_location__ref_dim_station_ (models\schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 12 unexpected 'as'.
+  syntax error line 15 at position 11 unexpected 'is'.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\relationships_fact_aq_location__ref_dim_station_.sql.
+[0m08:39:55.312111 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c00713-0206-d1fe-0000-0015aa474135
+[0m08:39:55.313648 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+[0m08:39:55.338768 [debug] [Thread-3 (]: Database Error in test not_null_stg_openaq_measurement_id (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measurement_id.sql
+[0m08:39:55.340727 [error] [Thread-3 (]: 3 of 4 ERROR not_null_stg_openaq_measurement_id ................................ [[31mERROR[0m in 2.42s]
+[0m08:39:55.343119 [debug] [Thread-3 (]: Finished running node test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8
+[0m08:39:55.345180 [debug] [Thread-7 (]: Marking all children of 'test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_openaq_measurement_id (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measurement_id.sql.
+[0m08:39:55.349026 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c00713-0206-d201-0000-0015aa472169
+[0m08:39:55.350707 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+[0m08:39:55.369412 [debug] [Thread-2 (]: Database Error in test not_null_stg_openaq_measured_at (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measured_at.sql
+[0m08:39:55.370909 [error] [Thread-2 (]: 2 of 4 ERROR not_null_stg_openaq_measured_at ................................... [[31mERROR[0m in 2.45s]
+[0m08:39:55.372629 [debug] [Thread-2 (]: Finished running node test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b
+[0m08:39:55.373977 [debug] [Thread-7 (]: Marking all children of 'test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_openaq_measured_at (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measured_at.sql.
+[0m08:39:55.377944 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:39:55.379216 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_staging' was left open.
+[0m08:39:55.381034 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_staging: Close
+[0m08:39:55.898023 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_marts' was left open.
+[0m08:39:55.899439 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_marts: Close
+[0m08:39:56.441848 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW' was left open.
+[0m08:39:56.442944 [debug] [MainThread]: On list_ANALYTICS_DB_RAW: Close
+[0m08:39:56.996464 [debug] [MainThread]: Connection 'test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8' was left open.
+[0m08:39:56.997812 [debug] [MainThread]: On test.hotels_egypt_project.not_null_stg_openaq_measurement_id.185733a3a8: Close
+[0m08:39:57.552875 [debug] [MainThread]: Connection 'test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f' was left open.
+[0m08:39:57.553830 [debug] [MainThread]: On test.hotels_egypt_project.relationships_fact_aq_location__ref_dim_station_.783e75843f: Close
+[0m08:39:58.079797 [debug] [MainThread]: Connection 'test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea' was left open.
+[0m08:39:58.081323 [debug] [MainThread]: On test.hotels_egypt_project.not_null_fact_aq_measurement_id.083ce3adea: Close
+[0m08:39:58.609349 [debug] [MainThread]: Connection 'test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b' was left open.
+[0m08:39:58.610138 [debug] [MainThread]: On test.hotels_egypt_project.not_null_stg_openaq_measured_at.442c5b991b: Close
+[0m08:39:59.141298 [info ] [MainThread]: 
+[0m08:39:59.142709 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 10.02 seconds (10.02s).
+[0m08:39:59.146485 [debug] [MainThread]: Command end result
+[0m08:39:59.205035 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:39:59.211502 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:39:59.234357 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\run_results.json
+[0m08:39:59.235301 [info ] [MainThread]: 
+[0m08:39:59.236275 [info ] [MainThread]: [31mCompleted with 4 errors, 0 partial successes, and 0 warnings:[0m
+[0m08:39:59.237015 [info ] [MainThread]: 
+[0m08:39:59.237838 [error] [MainThread]: [31mFailure in test not_null_fact_aq_measurement_id (models\schema.yml)[0m
+[0m08:39:59.238691 [error] [MainThread]:   Database Error in test not_null_fact_aq_measurement_id (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_MARTS.FACT_AQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_fact_aq_measurement_id.sql
+[0m08:39:59.239357 [info ] [MainThread]: 
+[0m08:39:59.240243 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\schema.yml\not_null_fact_aq_measurement_id.sql
+[0m08:39:59.241108 [info ] [MainThread]: 
+[0m08:39:59.241869 [error] [MainThread]: [31mFailure in test relationships_fact_aq_location__ref_dim_station_ (models\schema.yml)[0m
+[0m08:39:59.242651 [error] [MainThread]:   Database Error in test relationships_fact_aq_location__ref_dim_station_ (models\schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 12 unexpected 'as'.
+  syntax error line 15 at position 11 unexpected 'is'.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\relationships_fact_aq_location__ref_dim_station_.sql
+[0m08:39:59.243329 [info ] [MainThread]: 
+[0m08:39:59.244071 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\schema.yml\relationships_fact_aq_location__ref_dim_station_.sql
+[0m08:39:59.244995 [info ] [MainThread]: 
+[0m08:39:59.246529 [error] [MainThread]: [31mFailure in test not_null_stg_openaq_measurement_id (models\schema.yml)[0m
+[0m08:39:59.247578 [error] [MainThread]:   Database Error in test not_null_stg_openaq_measurement_id (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measurement_id.sql
+[0m08:39:59.248308 [info ] [MainThread]: 
+[0m08:39:59.249126 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measurement_id.sql
+[0m08:39:59.249967 [info ] [MainThread]: 
+[0m08:39:59.250745 [error] [MainThread]: [31mFailure in test not_null_stg_openaq_measured_at (models\schema.yml)[0m
+[0m08:39:59.251669 [error] [MainThread]:   Database Error in test not_null_stg_openaq_measured_at (models\schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'ANALYTICS_DB.RAW_STAGING.STG_OPENAQ' does not exist or not authorized.
+  compiled code at target\run\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measured_at.sql
+[0m08:39:59.252396 [info ] [MainThread]: 
+[0m08:39:59.253192 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\schema.yml\not_null_stg_openaq_measured_at.sql
+[0m08:39:59.253853 [info ] [MainThread]: 
+[0m08:39:59.254688 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=4 SKIP=0 NO-OP=0 TOTAL=4
+[0m08:39:59.255979 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:39:59.258178 [debug] [MainThread]: Command `dbt test` failed at 08:39:59.257911 after 15.62 seconds
+[0m08:39:59.259022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D88998370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D87D4D760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D876037D0>]}
+[0m08:39:59.259805 [debug] [MainThread]: Flushing usage events
+[0m08:40:01.022154 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:42:57.499298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234349FD400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234356EC7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023436C9BED0>]}
+
+
+============================== 08:42:57.534773 | 23992154-96ae-4c1d-8fa4-4aa4790ee463 ==============================
+[0m08:42:57.534773 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:42:57.538856 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'no_print': 'None', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'invocation_command': 'dbt run --models stg_openaq dim_station dim_parameter fact_aq', 'printer_width': '80', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m08:42:57.540395 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m08:42:57.542592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023436DF8D60>]}
+[0m08:43:00.268171 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:43:00.269794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023447ACE7A0>]}
+[0m08:43:00.271084 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:43:00.272376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023447AA5150>]}
+[0m08:43:00.755605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002343479F3E0>]}
+[0m08:43:00.976079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023447CD8E50>]}
+[0m08:43:00.979043 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:43:03.714394 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:43:04.722269 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:43:04.723475 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:43:04.974907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002344809F520>]}
+[0m08:43:05.517316 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:43:05.532546 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:43:05.706788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002344810CAD0>]}
+[0m08:43:05.709155 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 492 macros
+[0m08:43:05.712418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023447FB7E30>]}
+[0m08:43:05.722730 [info ] [MainThread]: 
+[0m08:43:05.725110 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:43:05.730352 [info ] [MainThread]: 
+[0m08:43:05.735708 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m08:43:05.765054 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:43:05.805384 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:43:05.851004 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:43:06.366504 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:43:06.369067 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:43:06.370947 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:43:06.373362 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:43:06.375290 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:43:06.377020 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:06.379649 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:43:06.382189 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:06.385476 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:10.137593 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.755 seconds
+[0m08:43:10.139846 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.754 seconds
+[0m08:43:10.153445 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.776 seconds
+[0m08:43:10.163050 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_staging'
+[0m08:43:10.174669 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_marts'
+[0m08:43:10.205971 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW'
+[0m08:43:10.276321 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_marts"
+[0m08:43:10.279806 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW"
+[0m08:43:10.282518 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_staging"
+[0m08:43:10.283761 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_marts: show objects in ANALYTICS_DB.RAW_marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_marts"} */;
+[0m08:43:10.285193 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW: show objects in ANALYTICS_DB.RAW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW"} */;
+[0m08:43:10.286749 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_staging: show objects in ANALYTICS_DB.RAW_staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_staging"} */;
+[0m08:43:10.288107 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:10.289053 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:10.289998 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:12.049089 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.759 seconds
+[0m08:43:12.109643 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.821 seconds
+[0m08:43:12.122966 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.834 seconds
+[0m08:43:12.134768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023449954190>]}
+[0m08:43:12.315413 [debug] [Thread-1 (]: Began running node model.hotels_egypt_project.stg_openaq
+[0m08:43:12.318557 [info ] [Thread-1 (]: 1 of 4 START sql view model RAW_staging.stg_openaq ............................. [RUN]
+[0m08:43:12.323761 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.stg_openaq'
+[0m08:43:12.326510 [debug] [Thread-1 (]: Began compiling node model.hotels_egypt_project.stg_openaq
+[0m08:43:12.380149 [debug] [Thread-1 (]: Writing injected SQL for node "model.hotels_egypt_project.stg_openaq"
+[0m08:43:12.386577 [debug] [Thread-1 (]: Began executing node model.hotels_egypt_project.stg_openaq
+[0m08:43:12.606022 [debug] [Thread-1 (]: Writing runtime sql for node "model.hotels_egypt_project.stg_openaq"
+[0m08:43:12.618859 [debug] [Thread-1 (]: Using snowflake connection "model.hotels_egypt_project.stg_openaq"
+[0m08:43:12.623088 [debug] [Thread-1 (]: On model.hotels_egypt_project.stg_openaq: create or replace   view ANALYTICS_DB.RAW_staging.stg_openaq
+  
+  
+  
+  
+  as (
+    -- staging: expects a source/table `local.openaq_stream` with columns matching the NDJSON keys
+with raw as (
+    select
+        measurement_id,
+        location,
+        city,
+        country,
+        parameter,
+        value,
+        unit,
+        latitude,
+        longitude,
+        date_utc as measured_at,
+        fetched_at
+    from ANALYTICS_DB.RAW.OPENAQ_STREAM
+)
+
+select * from raw
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.stg_openaq"} */;
+[0m08:43:12.631057 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:43:14.267777 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c00717-0206-d0b5-0000-0015aa479131
+[0m08:43:14.269677 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 10 at position 8
+invalid identifier 'MEASUREMENT_ID'
+[0m08:43:14.299595 [debug] [Thread-1 (]: Database Error in model stg_openaq (models\staging\stg_openaq.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 8
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\staging\stg_openaq.sql
+[0m08:43:14.306394 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23992154-96ae-4c1d-8fa4-4aa4790ee463', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435028FD0>]}
+[0m08:43:14.309820 [error] [Thread-1 (]: 1 of 4 ERROR creating sql view model RAW_staging.stg_openaq .................... [[31mERROR[0m in 1.98s]
+[0m08:43:14.313524 [debug] [Thread-1 (]: Finished running node model.hotels_egypt_project.stg_openaq
+[0m08:43:14.316401 [debug] [Thread-7 (]: Marking all children of 'model.hotels_egypt_project.stg_openaq' to be skipped because of status 'error'.  Reason: Database Error in model stg_openaq (models\staging\stg_openaq.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 8
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\staging\stg_openaq.sql.
+[0m08:43:14.321987 [debug] [Thread-3 (]: Began running node model.hotels_egypt_project.dim_station
+[0m08:43:14.326260 [debug] [Thread-4 (]: Began running node model.hotels_egypt_project.fact_aq
+[0m08:43:14.328435 [debug] [Thread-2 (]: Began running node model.hotels_egypt_project.dim_parameter
+[0m08:43:14.324162 [info ] [Thread-3 (]: 3 of 4 SKIP relation RAW.dim_station ........................................... [[33mSKIP[0m]
+[0m08:43:14.331000 [info ] [Thread-4 (]: 4 of 4 SKIP relation RAW_marts.fact_aq ......................................... [[33mSKIP[0m]
+[0m08:43:14.336112 [debug] [Thread-3 (]: Finished running node model.hotels_egypt_project.dim_station
+[0m08:43:14.333010 [info ] [Thread-2 (]: 2 of 4 SKIP relation RAW.dim_parameter ......................................... [[33mSKIP[0m]
+[0m08:43:14.338895 [debug] [Thread-4 (]: Finished running node model.hotels_egypt_project.fact_aq
+[0m08:43:14.341770 [debug] [Thread-2 (]: Finished running node model.hotels_egypt_project.dim_parameter
+[0m08:43:14.347928 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:43:14.349601 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:43:14.351091 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:43:14.881308 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:43:14.882753 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:43:15.449001 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:43:15.450013 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:43:15.967386 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_staging' was left open.
+[0m08:43:15.968354 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_staging: Close
+[0m08:43:16.478076 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_marts' was left open.
+[0m08:43:16.478966 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_marts: Close
+[0m08:43:16.988359 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW' was left open.
+[0m08:43:16.990081 [debug] [MainThread]: On list_ANALYTICS_DB_RAW: Close
+[0m08:43:17.494484 [debug] [MainThread]: Connection 'model.hotels_egypt_project.stg_openaq' was left open.
+[0m08:43:17.495347 [debug] [MainThread]: On model.hotels_egypt_project.stg_openaq: Close
+[0m08:43:18.060367 [info ] [MainThread]: 
+[0m08:43:18.061562 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 12.33 seconds (12.33s).
+[0m08:43:18.063512 [debug] [MainThread]: Command end result
+[0m08:43:18.117490 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:43:18.124254 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:43:18.140584 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\run_results.json
+[0m08:43:18.141627 [info ] [MainThread]: 
+[0m08:43:18.142783 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m08:43:18.143813 [info ] [MainThread]: 
+[0m08:43:18.144912 [error] [MainThread]: [31mFailure in model stg_openaq (models\staging\stg_openaq.sql)[0m
+[0m08:43:18.145947 [error] [MainThread]:   Database Error in model stg_openaq (models\staging\stg_openaq.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 8
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\staging\stg_openaq.sql
+[0m08:43:18.146973 [info ] [MainThread]: 
+[0m08:43:18.148410 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\staging\stg_openaq.sql
+[0m08:43:18.149676 [info ] [MainThread]: 
+[0m08:43:18.150992 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=3 NO-OP=0 TOTAL=4
+[0m08:43:18.152583 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:43:18.156194 [debug] [MainThread]: Command `dbt run` failed at 08:43:18.155673 after 21.25 seconds
+[0m08:43:18.157458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023436DE92B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002342F594C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234497A63F0>]}
+[0m08:43:18.158498 [debug] [MainThread]: Flushing usage events
+[0m08:43:19.583412 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:43:47.824365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185DBDC1400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185DCA9C7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185DE04FED0>]}
+
+
+============================== 08:43:47.852917 | e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7 ==============================
+[0m08:43:47.852917 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:43:47.854415 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --select stg_openaq dim_station dim_parameter fact_aq', 'printer_width': '80', 'write_json': 'True', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m08:43:50.661332 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:43:50.664473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EDDD3950>]}
+[0m08:43:50.667271 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:43:50.669925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EEE7E690>]}
+[0m08:43:51.875434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EEE55650>]}
+[0m08:43:52.604605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185DE038230>]}
+[0m08:43:52.615797 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:43:55.530491 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:43:56.206782 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m08:43:56.210101 [debug] [MainThread]: Partial parsing: updated file: hotels_egypt_project://models\staging\stg_openaq.sql
+[0m08:43:57.626774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EF7149F0>]}
+[0m08:43:57.952525 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:43:57.960889 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:43:58.040747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EF5D25B0>]}
+[0m08:43:58.042149 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 492 macros
+[0m08:43:58.043752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EF755850>]}
+[0m08:43:58.050394 [info ] [MainThread]: 
+[0m08:43:58.052655 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:43:58.054940 [info ] [MainThread]: 
+[0m08:43:58.057658 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m08:43:58.078230 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:43:58.093394 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:43:58.109022 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:43:58.556583 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:43:58.558549 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:43:58.560167 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:43:58.561475 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:43:58.562665 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:43:58.563711 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:58.564864 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:43:58.566191 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:43:58.568061 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:44:02.037921 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.474 seconds
+[0m08:44:02.047928 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.480 seconds
+[0m08:44:02.049874 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.484 seconds
+[0m08:44:02.066794 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW'
+[0m08:44:02.080685 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_marts'
+[0m08:44:02.127635 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_staging'
+[0m08:44:02.175309 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_staging"
+[0m08:44:02.178195 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW"
+[0m08:44:02.196394 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_marts"
+[0m08:44:02.198035 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_staging: show objects in ANALYTICS_DB.RAW_staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_staging"} */;
+[0m08:44:02.199710 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW: show objects in ANALYTICS_DB.RAW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW"} */;
+[0m08:44:02.201685 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_marts: show objects in ANALYTICS_DB.RAW_marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_marts"} */;
+[0m08:44:02.203503 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:44:02.205486 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:44:02.206988 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:44:04.279648 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.076 seconds
+[0m08:44:04.296622 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.089 seconds
+[0m08:44:04.316041 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.110 seconds
+[0m08:44:04.329370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185F0E23750>]}
+[0m08:44:04.359204 [debug] [Thread-1 (]: Began running node model.hotels_egypt_project.stg_openaq
+[0m08:44:04.362276 [info ] [Thread-1 (]: 1 of 4 START sql view model RAW_staging.stg_openaq ............................. [RUN]
+[0m08:44:04.366611 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.stg_openaq'
+[0m08:44:04.370307 [debug] [Thread-1 (]: Began compiling node model.hotels_egypt_project.stg_openaq
+[0m08:44:04.414111 [debug] [Thread-1 (]: Writing injected SQL for node "model.hotels_egypt_project.stg_openaq"
+[0m08:44:04.427120 [debug] [Thread-1 (]: Began executing node model.hotels_egypt_project.stg_openaq
+[0m08:44:04.713455 [debug] [Thread-1 (]: Writing runtime sql for node "model.hotels_egypt_project.stg_openaq"
+[0m08:44:04.727255 [debug] [Thread-1 (]: Using snowflake connection "model.hotels_egypt_project.stg_openaq"
+[0m08:44:04.730342 [debug] [Thread-1 (]: On model.hotels_egypt_project.stg_openaq: create or replace   view ANALYTICS_DB.RAW_staging.stg_openaq
+  
+  
+  
+  
+  as (
+    -- staging: expects a source/table `local.openaq_stream` with columns matching the NDJSON keys
+with raw as (
+    select
+        "measurement_id",
+        "location",
+        "city",
+        "country",
+        "parameter",
+        "value",
+        "unit",
+        "latitude",
+        "longitude",
+        "date_utc" as "measured_at",
+        "fetched_at"
+    from ANALYTICS_DB.RAW.OPENAQ_STREAM
+)
+
+select * from raw
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.stg_openaq"} */;
+[0m08:44:04.734683 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:44:06.464811 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.731 seconds
+[0m08:44:06.548089 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185DC3C5EF0>]}
+[0m08:44:06.553398 [info ] [Thread-1 (]: 1 of 4 OK created sql view model RAW_staging.stg_openaq ........................ [[32mSUCCESS 1[0m in 2.18s]
+[0m08:44:06.556892 [debug] [Thread-1 (]: Finished running node model.hotels_egypt_project.stg_openaq
+[0m08:44:06.559620 [debug] [Thread-3 (]: Began running node model.hotels_egypt_project.dim_station
+[0m08:44:06.562815 [debug] [Thread-2 (]: Began running node model.hotels_egypt_project.dim_parameter
+[0m08:44:06.564650 [debug] [Thread-4 (]: Began running node model.hotels_egypt_project.fact_aq
+[0m08:44:06.561565 [info ] [Thread-3 (]: 3 of 4 START sql view model RAW.dim_station .................................... [RUN]
+[0m08:44:06.567639 [info ] [Thread-2 (]: 2 of 4 START sql view model RAW.dim_parameter .................................. [RUN]
+[0m08:44:06.572778 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.dim_station'
+[0m08:44:06.569950 [info ] [Thread-4 (]: 4 of 4 START sql view model RAW_marts.fact_aq .................................. [RUN]
+[0m08:44:06.575163 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.dim_parameter'
+[0m08:44:06.576788 [debug] [Thread-3 (]: Began compiling node model.hotels_egypt_project.dim_station
+[0m08:44:06.578494 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.fact_aq'
+[0m08:44:06.580070 [debug] [Thread-2 (]: Began compiling node model.hotels_egypt_project.dim_parameter
+[0m08:44:06.592096 [debug] [Thread-3 (]: Writing injected SQL for node "model.hotels_egypt_project.dim_station"
+[0m08:44:06.594228 [debug] [Thread-4 (]: Began compiling node model.hotels_egypt_project.fact_aq
+[0m08:44:06.607219 [debug] [Thread-2 (]: Writing injected SQL for node "model.hotels_egypt_project.dim_parameter"
+[0m08:44:06.617058 [debug] [Thread-4 (]: Writing injected SQL for node "model.hotels_egypt_project.fact_aq"
+[0m08:44:06.623779 [debug] [Thread-3 (]: Began executing node model.hotels_egypt_project.dim_station
+[0m08:44:06.637669 [debug] [Thread-3 (]: Writing runtime sql for node "model.hotels_egypt_project.dim_station"
+[0m08:44:06.639948 [debug] [Thread-2 (]: Began executing node model.hotels_egypt_project.dim_parameter
+[0m08:44:06.642225 [debug] [Thread-4 (]: Began executing node model.hotels_egypt_project.fact_aq
+[0m08:44:06.655347 [debug] [Thread-2 (]: Writing runtime sql for node "model.hotels_egypt_project.dim_parameter"
+[0m08:44:06.669669 [debug] [Thread-4 (]: Writing runtime sql for node "model.hotels_egypt_project.fact_aq"
+[0m08:44:06.674344 [debug] [Thread-3 (]: Using snowflake connection "model.hotels_egypt_project.dim_station"
+[0m08:44:06.676306 [debug] [Thread-3 (]: On model.hotels_egypt_project.dim_station: create or replace   view ANALYTICS_DB.RAW.dim_station
+  
+  
+  
+  
+  as (
+    -- dimension: distinct stations / locations
+select
+    row_number() over (order by location) as station_id,
+    location as station_name,
+    city,
+    country,
+    latitude,
+    longitude
+from (
+    select distinct location, city, country, latitude, longitude
+    from ANALYTICS_DB.RAW_staging.stg_openaq
+)
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.dim_station"} */;
+[0m08:44:06.678053 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:44:06.682816 [debug] [Thread-4 (]: Using snowflake connection "model.hotels_egypt_project.fact_aq"
+[0m08:44:06.686902 [debug] [Thread-2 (]: Using snowflake connection "model.hotels_egypt_project.dim_parameter"
+[0m08:44:06.688461 [debug] [Thread-4 (]: On model.hotels_egypt_project.fact_aq: create or replace   view ANALYTICS_DB.RAW_marts.fact_aq
+  
+  
+  
+  
+  as (
+    -- fact table for OpenAQ measurements
+select
+    measurement_id,
+    location,
+    city,
+    country,
+    parameter,
+    value,
+    unit,
+    latitude,
+    longitude,
+    measured_at,
+    fetched_at
+from ANALYTICS_DB.RAW_staging.stg_openaq
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.fact_aq"} */;
+[0m08:44:06.690207 [debug] [Thread-2 (]: On model.hotels_egypt_project.dim_parameter: create or replace   view ANALYTICS_DB.RAW.dim_parameter
+  
+  
+  
+  
+  as (
+    -- dimension: measurement parameter (pm25, no2, etc.)
+select
+    row_number() over (order by parameter) as parameter_id,
+    parameter as parameter_name,
+    min(unit) as unit
+from (
+    select distinct parameter, unit
+    from ANALYTICS_DB.RAW_staging.stg_openaq
+)
+group by parameter
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.dim_parameter"} */;
+[0m08:44:06.708577 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m08:44:06.710857 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:44:08.286843 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c00718-0206-d1fe-0000-0015aa474155
+[0m08:44:08.287761 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 9 at position 4
+invalid identifier 'MEASUREMENT_ID'
+[0m08:44:08.301806 [debug] [Thread-4 (]: Database Error in model fact_aq (models\marts\fact_aq.sql)
+  000904 (42000): SQL compilation error: error line 9 at position 4
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\marts\fact_aq.sql
+[0m08:44:08.303060 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185F08CD1D0>]}
+[0m08:44:08.304267 [error] [Thread-4 (]: 4 of 4 ERROR creating sql view model RAW_marts.fact_aq ......................... [[31mERROR[0m in 1.72s]
+[0m08:44:08.305973 [debug] [Thread-4 (]: Finished running node model.hotels_egypt_project.fact_aq
+[0m08:44:08.307219 [debug] [Thread-7 (]: Marking all children of 'model.hotels_egypt_project.fact_aq' to be skipped because of status 'error'.  Reason: Database Error in model fact_aq (models\marts\fact_aq.sql)
+  000904 (42000): SQL compilation error: error line 9 at position 4
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\marts\fact_aq.sql.
+[0m08:44:08.354979 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c00718-0206-d17a-0000-0015aa47513d
+[0m08:44:08.356073 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 16 at position 20
+invalid identifier 'LOCATION'
+[0m08:44:08.371902 [debug] [Thread-3 (]: Database Error in model dim_station (models\dimensions\dim_station.sql)
+  000904 (42000): SQL compilation error: error line 16 at position 20
+  invalid identifier 'LOCATION'
+  compiled code at target\run\hotels_egypt_project\models\dimensions\dim_station.sql
+[0m08:44:08.373340 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185F0740F30>]}
+[0m08:44:08.375035 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c00718-0206-d0eb-0000-0015aa477111
+[0m08:44:08.377456 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 13 at position 20
+invalid identifier 'PARAMETER'
+[0m08:44:08.376482 [error] [Thread-3 (]: 3 of 4 ERROR creating sql view model RAW.dim_station ........................... [[31mERROR[0m in 1.80s]
+[0m08:44:08.382918 [debug] [Thread-3 (]: Finished running node model.hotels_egypt_project.dim_station
+[0m08:44:08.384646 [debug] [Thread-7 (]: Marking all children of 'model.hotels_egypt_project.dim_station' to be skipped because of status 'error'.  Reason: Database Error in model dim_station (models\dimensions\dim_station.sql)
+  000904 (42000): SQL compilation error: error line 16 at position 20
+  invalid identifier 'LOCATION'
+  compiled code at target\run\hotels_egypt_project\models\dimensions\dim_station.sql.
+[0m08:44:08.396145 [debug] [Thread-2 (]: Database Error in model dim_parameter (models\dimensions\dim_parameter.sql)
+  000904 (42000): SQL compilation error: error line 13 at position 20
+  invalid identifier 'PARAMETER'
+  compiled code at target\run\hotels_egypt_project\models\dimensions\dim_parameter.sql
+[0m08:44:08.397524 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e61d2c9d-2ee3-46ae-b6ac-b1bd7dcdecd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185F001E6F0>]}
+[0m08:44:08.399213 [error] [Thread-2 (]: 2 of 4 ERROR creating sql view model RAW.dim_parameter ......................... [[31mERROR[0m in 1.82s]
+[0m08:44:08.405188 [debug] [Thread-2 (]: Finished running node model.hotels_egypt_project.dim_parameter
+[0m08:44:08.406836 [debug] [Thread-7 (]: Marking all children of 'model.hotels_egypt_project.dim_parameter' to be skipped because of status 'error'.  Reason: Database Error in model dim_parameter (models\dimensions\dim_parameter.sql)
+  000904 (42000): SQL compilation error: error line 13 at position 20
+  invalid identifier 'PARAMETER'
+  compiled code at target\run\hotels_egypt_project\models\dimensions\dim_parameter.sql.
+[0m08:44:08.410141 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:44:08.410935 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:44:08.411778 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:44:08.910423 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:44:08.911206 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:44:09.411301 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:44:09.412036 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:44:09.923160 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW' was left open.
+[0m08:44:09.924217 [debug] [MainThread]: On list_ANALYTICS_DB_RAW: Close
+[0m08:44:10.466336 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_marts' was left open.
+[0m08:44:10.467048 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_marts: Close
+[0m08:44:10.963953 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_staging' was left open.
+[0m08:44:10.964978 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_staging: Close
+[0m08:44:11.474827 [debug] [MainThread]: Connection 'model.hotels_egypt_project.stg_openaq' was left open.
+[0m08:44:11.476010 [debug] [MainThread]: On model.hotels_egypt_project.stg_openaq: Close
+[0m08:44:12.006802 [debug] [MainThread]: Connection 'model.hotels_egypt_project.dim_station' was left open.
+[0m08:44:12.007753 [debug] [MainThread]: On model.hotels_egypt_project.dim_station: Close
+[0m08:44:12.519927 [debug] [MainThread]: Connection 'model.hotels_egypt_project.dim_parameter' was left open.
+[0m08:44:12.520781 [debug] [MainThread]: On model.hotels_egypt_project.dim_parameter: Close
+[0m08:44:12.997080 [debug] [MainThread]: Connection 'model.hotels_egypt_project.fact_aq' was left open.
+[0m08:44:12.997805 [debug] [MainThread]: On model.hotels_egypt_project.fact_aq: Close
+[0m08:44:13.499880 [info ] [MainThread]: 
+[0m08:44:13.501048 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 15.44 seconds (15.44s).
+[0m08:44:13.503455 [debug] [MainThread]: Command end result
+[0m08:44:13.548275 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:44:13.554744 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:44:13.569149 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\run_results.json
+[0m08:44:13.570117 [info ] [MainThread]: 
+[0m08:44:13.571124 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m08:44:13.571903 [info ] [MainThread]: 
+[0m08:44:13.572843 [error] [MainThread]: [31mFailure in model fact_aq (models\marts\fact_aq.sql)[0m
+[0m08:44:13.573818 [error] [MainThread]:   Database Error in model fact_aq (models\marts\fact_aq.sql)
+  000904 (42000): SQL compilation error: error line 9 at position 4
+  invalid identifier 'MEASUREMENT_ID'
+  compiled code at target\run\hotels_egypt_project\models\marts\fact_aq.sql
+[0m08:44:13.574681 [info ] [MainThread]: 
+[0m08:44:13.575557 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\marts\fact_aq.sql
+[0m08:44:13.576470 [info ] [MainThread]: 
+[0m08:44:13.577890 [error] [MainThread]: [31mFailure in model dim_station (models\dimensions\dim_station.sql)[0m
+[0m08:44:13.579706 [error] [MainThread]:   Database Error in model dim_station (models\dimensions\dim_station.sql)
+  000904 (42000): SQL compilation error: error line 16 at position 20
+  invalid identifier 'LOCATION'
+  compiled code at target\run\hotels_egypt_project\models\dimensions\dim_station.sql
+[0m08:44:13.580885 [info ] [MainThread]: 
+[0m08:44:13.582040 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\dimensions\dim_station.sql
+[0m08:44:13.582886 [info ] [MainThread]: 
+[0m08:44:13.583787 [error] [MainThread]: [31mFailure in model dim_parameter (models\dimensions\dim_parameter.sql)[0m
+[0m08:44:13.584820 [error] [MainThread]:   Database Error in model dim_parameter (models\dimensions\dim_parameter.sql)
+  000904 (42000): SQL compilation error: error line 13 at position 20
+  invalid identifier 'PARAMETER'
+  compiled code at target\run\hotels_egypt_project\models\dimensions\dim_parameter.sql
+[0m08:44:13.585742 [info ] [MainThread]: 
+[0m08:44:13.586648 [info ] [MainThread]:   compiled code at target\compiled\hotels_egypt_project\models\dimensions\dim_parameter.sql
+[0m08:44:13.587593 [info ] [MainThread]: 
+[0m08:44:13.588715 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=4
+[0m08:44:13.589959 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:44:13.591829 [debug] [MainThread]: Command `dbt run` failed at 08:44:13.591620 after 26.39 seconds
+[0m08:44:13.592484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185DBC877D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185F06CB8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185F002BCB0>]}
+[0m08:44:13.593087 [debug] [MainThread]: Flushing usage events
+[0m08:44:15.260117 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:45:55.695814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002508645D400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250871447D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025087727ED0>]}
+
+
+============================== 08:45:55.716492 | 59543a5b-0fc0-40a8-ac23-7a2c2fa53073 ==============================
+[0m08:45:55.716492 [info ] [MainThread]: Running with dbt=1.10.13
+[0m08:45:55.719234 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'printer_width': '80', 'target_path': 'None', 'no_print': 'None', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\ahmad\\Data-Exploration-Preparation-and-Visualization-final-project\\dbt\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ahmad\\.dbt', 'invocation_command': 'dbt run --select stg_openaq dim_station dim_parameter fact_aq', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m08:45:57.861930 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:45:57.863540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250994F3950>]}
+[0m08:45:57.864846 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m08:45:57.867206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250995CE690>]}
+[0m08:45:58.264310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250995A5650>]}
+[0m08:45:58.429317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025087718230>]}
+[0m08:45:58.431708 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m08:45:59.562900 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m08:45:59.936970 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m08:45:59.938845 [debug] [MainThread]: Partial parsing: updated file: hotels_egypt_project://models\dimensions\dim_station.sql
+[0m08:45:59.939935 [debug] [MainThread]: Partial parsing: updated file: hotels_egypt_project://models\marts\fact_aq.sql
+[0m08:45:59.941137 [debug] [MainThread]: Partial parsing: updated file: hotels_egypt_project://models\dimensions\dim_parameter.sql
+[0m08:46:00.921976 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m08:46:00.923614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025099DAF850>]}
+[0m08:46:01.178556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025099E83790>]}
+[0m08:46:01.399269 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:46:01.404993 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:46:01.470436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025099EA9D90>]}
+[0m08:46:01.471495 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 492 macros
+[0m08:46:01.472750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025099D457B0>]}
+[0m08:46:01.476589 [info ] [MainThread]: 
+[0m08:46:01.477662 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:46:01.478816 [info ] [MainThread]: 
+[0m08:46:01.480881 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m08:46:01.494508 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:46:01.512228 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:46:01.545865 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB'
+[0m08:46:01.787394 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:46:01.788850 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:46:01.789968 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:46:01.791133 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB"
+[0m08:46:01.792253 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:46:01.793754 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:46:01.794666 [debug] [ThreadPool]: On list_ANALYTICS_DB: show terse schemas in database ANALYTICS_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB"} */
+[0m08:46:01.795534 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:46:01.797103 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:46:05.030300 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.234 seconds
+[0m08:46:05.032832 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.239 seconds
+[0m08:46:05.048713 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 3.251 seconds
+[0m08:46:05.061225 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_staging'
+[0m08:46:05.099917 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW'
+[0m08:46:05.117854 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_staging"
+[0m08:46:05.130921 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANALYTICS_DB_RAW_marts'
+[0m08:46:05.128325 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW"
+[0m08:46:05.132822 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_staging: show objects in ANALYTICS_DB.RAW_staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_staging"} */;
+[0m08:46:05.139393 [debug] [ThreadPool]: Using snowflake connection "list_ANALYTICS_DB_RAW_marts"
+[0m08:46:05.140877 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW: show objects in ANALYTICS_DB.RAW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW"} */;
+[0m08:46:05.142173 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:46:05.143377 [debug] [ThreadPool]: On list_ANALYTICS_DB_RAW_marts: show objects in ANALYTICS_DB.RAW_marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "connection_name": "list_ANALYTICS_DB_RAW_marts"} */;
+[0m08:46:05.144631 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:46:05.146688 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:46:07.517208 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.372 seconds
+[0m08:46:07.536972 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.387 seconds
+[0m08:46:07.558446 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.413 seconds
+[0m08:46:07.647103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025099720410>]}
+[0m08:46:07.874849 [debug] [Thread-1 (]: Began running node model.hotels_egypt_project.stg_openaq
+[0m08:46:07.882219 [info ] [Thread-1 (]: 1 of 4 START sql view model RAW_staging.stg_openaq ............................. [RUN]
+[0m08:46:07.891238 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.stg_openaq'
+[0m08:46:07.896343 [debug] [Thread-1 (]: Began compiling node model.hotels_egypt_project.stg_openaq
+[0m08:46:08.000082 [debug] [Thread-1 (]: Writing injected SQL for node "model.hotels_egypt_project.stg_openaq"
+[0m08:46:08.008403 [debug] [Thread-1 (]: Began executing node model.hotels_egypt_project.stg_openaq
+[0m08:46:08.386706 [debug] [Thread-1 (]: Writing runtime sql for node "model.hotels_egypt_project.stg_openaq"
+[0m08:46:08.398613 [debug] [Thread-1 (]: Using snowflake connection "model.hotels_egypt_project.stg_openaq"
+[0m08:46:08.402425 [debug] [Thread-1 (]: On model.hotels_egypt_project.stg_openaq: create or replace   view ANALYTICS_DB.RAW_staging.stg_openaq
+  
+  
+  
+  
+  as (
+    -- staging: expects a source/table `local.openaq_stream` with columns matching the NDJSON keys
+with raw as (
+    select
+        "measurement_id",
+        "location",
+        "city",
+        "country",
+        "parameter",
+        "value",
+        "unit",
+        "latitude",
+        "longitude",
+        "date_utc" as "measured_at",
+        "fetched_at"
+    from ANALYTICS_DB.RAW.OPENAQ_STREAM
+)
+
+select * from raw
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.stg_openaq"} */;
+[0m08:46:08.405944 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:46:10.398605 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.992 seconds
+[0m08:46:10.685814 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025086A80FD0>]}
+[0m08:46:10.687841 [info ] [Thread-1 (]: 1 of 4 OK created sql view model RAW_staging.stg_openaq ........................ [[32mSUCCESS 1[0m in 2.79s]
+[0m08:46:10.694490 [debug] [Thread-1 (]: Finished running node model.hotels_egypt_project.stg_openaq
+[0m08:46:10.698310 [debug] [Thread-3 (]: Began running node model.hotels_egypt_project.dim_station
+[0m08:46:10.699533 [debug] [Thread-4 (]: Began running node model.hotels_egypt_project.fact_aq
+[0m08:46:10.700611 [debug] [Thread-2 (]: Began running node model.hotels_egypt_project.dim_parameter
+[0m08:46:10.704375 [info ] [Thread-3 (]: 3 of 4 START sql view model RAW.dim_station .................................... [RUN]
+[0m08:46:10.717943 [info ] [Thread-4 (]: 4 of 4 START sql view model RAW_marts.fact_aq .................................. [RUN]
+[0m08:46:10.741350 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.fact_aq'
+[0m08:46:10.746695 [debug] [Thread-4 (]: Began compiling node model.hotels_egypt_project.fact_aq
+[0m08:46:10.735511 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.dim_station'
+[0m08:46:10.728179 [info ] [Thread-2 (]: 2 of 4 START sql view model RAW.dim_parameter .................................. [RUN]
+[0m08:46:10.772067 [debug] [Thread-4 (]: Writing injected SQL for node "model.hotels_egypt_project.fact_aq"
+[0m08:46:10.803068 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.hotels_egypt_project.dim_parameter'
+[0m08:46:10.821523 [debug] [Thread-4 (]: Began executing node model.hotels_egypt_project.fact_aq
+[0m08:46:10.805933 [debug] [Thread-3 (]: Began compiling node model.hotels_egypt_project.dim_station
+[0m08:46:10.850340 [debug] [Thread-2 (]: Began compiling node model.hotels_egypt_project.dim_parameter
+[0m08:46:10.873019 [debug] [Thread-4 (]: Writing runtime sql for node "model.hotels_egypt_project.fact_aq"
+[0m08:46:10.932901 [debug] [Thread-2 (]: Writing injected SQL for node "model.hotels_egypt_project.dim_parameter"
+[0m08:46:10.936722 [debug] [Thread-3 (]: Writing injected SQL for node "model.hotels_egypt_project.dim_station"
+[0m08:46:10.945603 [debug] [Thread-4 (]: Using snowflake connection "model.hotels_egypt_project.fact_aq"
+[0m08:46:10.950889 [debug] [Thread-2 (]: Began executing node model.hotels_egypt_project.dim_parameter
+[0m08:46:10.954543 [debug] [Thread-4 (]: On model.hotels_egypt_project.fact_aq: create or replace   view ANALYTICS_DB.RAW_marts.fact_aq
+  
+  
+  
+  
+  as (
+    -- fact table for OpenAQ measurements
+select
+    "measurement_id",
+    "location",
+    "city",
+    "country",
+    "parameter",
+    "value",
+    "unit",
+    "latitude",
+    "longitude",
+    "measured_at",
+    "fetched_at"
+from ANALYTICS_DB.RAW_staging.stg_openaq
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.fact_aq"} */;
+[0m08:46:10.976698 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m08:46:10.974092 [debug] [Thread-3 (]: Began executing node model.hotels_egypt_project.dim_station
+[0m08:46:10.984165 [debug] [Thread-2 (]: Writing runtime sql for node "model.hotels_egypt_project.dim_parameter"
+[0m08:46:11.017485 [debug] [Thread-3 (]: Writing runtime sql for node "model.hotels_egypt_project.dim_station"
+[0m08:46:11.118116 [debug] [Thread-3 (]: Using snowflake connection "model.hotels_egypt_project.dim_station"
+[0m08:46:11.122795 [debug] [Thread-2 (]: Using snowflake connection "model.hotels_egypt_project.dim_parameter"
+[0m08:46:11.129674 [debug] [Thread-3 (]: On model.hotels_egypt_project.dim_station: create or replace   view ANALYTICS_DB.RAW.dim_station
+  
+  
+  
+  
+  as (
+    -- dimension: distinct stations / locations
+select
+    row_number() over (order by "location") as "station_id",
+    "location" as "station_name",
+    "city",
+    "country",
+    "latitude",
+    "longitude"
+from (
+    select distinct "location", "city", "country", "latitude", "longitude"
+    from ANALYTICS_DB.RAW_staging.stg_openaq
+)
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.dim_station"} */;
+[0m08:46:11.133013 [debug] [Thread-2 (]: On model.hotels_egypt_project.dim_parameter: create or replace   view ANALYTICS_DB.RAW.dim_parameter
+  
+  
+  
+  
+  as (
+    -- dimension: measurement parameter (pm25, no2, etc.)
+select
+    row_number() over (order by "parameter") as "parameter_id",
+    "parameter" as "parameter_name",
+    min("unit") as "unit"
+from (
+    select distinct "parameter", "unit"
+    from ANALYTICS_DB.RAW_staging.stg_openaq
+)
+group by "parameter"
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "hotels_egypt_profile", "target_name": "dev", "node_id": "model.hotels_egypt_project.dim_parameter"} */;
+[0m08:46:11.135937 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:46:11.138604 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:46:13.458364 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.323 seconds
+[0m08:46:13.467854 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002509AF15470>]}
+[0m08:46:13.470196 [info ] [Thread-3 (]: 3 of 4 OK created sql view model RAW.dim_station ............................... [[32mSUCCESS 1[0m in 2.73s]
+[0m08:46:13.473279 [debug] [Thread-3 (]: Finished running node model.hotels_egypt_project.dim_station
+[0m08:46:13.480097 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.342 seconds
+[0m08:46:13.487082 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002509AC288F0>]}
+[0m08:46:13.489413 [info ] [Thread-2 (]: 2 of 4 OK created sql view model RAW.dim_parameter ............................. [[32mSUCCESS 1[0m in 2.69s]
+[0m08:46:13.492200 [debug] [Thread-2 (]: Finished running node model.hotels_egypt_project.dim_parameter
+[0m08:46:13.773724 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 2.797 seconds
+[0m08:46:13.782433 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '59543a5b-0fc0-40a8-ac23-7a2c2fa53073', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002509A33DE50>]}
+[0m08:46:13.785010 [info ] [Thread-4 (]: 4 of 4 OK created sql view model RAW_marts.fact_aq ............................. [[32mSUCCESS 1[0m in 3.04s]
+[0m08:46:13.787737 [debug] [Thread-4 (]: Finished running node model.hotels_egypt_project.fact_aq
+[0m08:46:13.793225 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:46:13.794630 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:46:13.795837 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:46:14.307142 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:46:14.308749 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:46:14.813674 [debug] [MainThread]: Connection 'list_ANALYTICS_DB' was left open.
+[0m08:46:14.814915 [debug] [MainThread]: On list_ANALYTICS_DB: Close
+[0m08:46:15.344874 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_staging' was left open.
+[0m08:46:15.346139 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_staging: Close
+[0m08:46:15.865196 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW' was left open.
+[0m08:46:15.866934 [debug] [MainThread]: On list_ANALYTICS_DB_RAW: Close
+[0m08:46:16.365302 [debug] [MainThread]: Connection 'list_ANALYTICS_DB_RAW_marts' was left open.
+[0m08:46:16.367109 [debug] [MainThread]: On list_ANALYTICS_DB_RAW_marts: Close
+[0m08:46:16.965256 [debug] [MainThread]: Connection 'model.hotels_egypt_project.stg_openaq' was left open.
+[0m08:46:16.967068 [debug] [MainThread]: On model.hotels_egypt_project.stg_openaq: Close
+[0m08:46:17.516926 [debug] [MainThread]: Connection 'model.hotels_egypt_project.dim_station' was left open.
+[0m08:46:17.518187 [debug] [MainThread]: On model.hotels_egypt_project.dim_station: Close
+[0m08:46:18.030025 [debug] [MainThread]: Connection 'model.hotels_egypt_project.fact_aq' was left open.
+[0m08:46:18.031620 [debug] [MainThread]: On model.hotels_egypt_project.fact_aq: Close
+[0m08:46:18.548644 [debug] [MainThread]: Connection 'model.hotels_egypt_project.dim_parameter' was left open.
+[0m08:46:18.549731 [debug] [MainThread]: On model.hotels_egypt_project.dim_parameter: Close
+[0m08:46:19.097832 [info ] [MainThread]: 
+[0m08:46:19.099457 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 17.62 seconds (17.62s).
+[0m08:46:19.103845 [debug] [MainThread]: Command end result
+[0m08:46:19.165771 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\manifest.json
+[0m08:46:19.174545 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\semantic_manifest.json
+[0m08:46:19.192144 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ahmad\Data-Exploration-Preparation-and-Visualization-final-project\dbt\target\run_results.json
+[0m08:46:19.193034 [info ] [MainThread]: 
+[0m08:46:19.194255 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:46:19.195188 [info ] [MainThread]: 
+[0m08:46:19.196216 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m08:46:19.197949 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:46:19.200721 [debug] [MainThread]: Command `dbt run` succeeded at 08:46:19.200374 after 24.14 seconds
+[0m08:46:19.201868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025086A18410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025099D92990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002509AB40410>]}
+[0m08:46:19.203213 [debug] [MainThread]: Flushing usage events
+[0m08:46:20.828548 [debug] [MainThread]: An error was encountered while trying to flush usage events

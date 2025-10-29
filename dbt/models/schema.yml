@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: local
+    database: ANALYTICS_DB
+    schema: RAW
+    tables:
+      - name: openaq_stream
+        identifier: OPENAQ_STREAM
+      - name: hotels_csv
+
+models:
+  - name: stg_openaq
+    description: "Staging model for OpenAQ measurements (expects columns matching the NDJSON output)."
+    tests:
+      - not_null:
+          column_name: measurement_id
+      - not_null:
+          column_name: measured_at
+          
+  - name: fact_aq
+    description: "Fact table of air quality measurements."
+    tests:
+      - not_null:
+          column_name: measurement_id
+      - relationships:
+          to: ref('dim_station')
+          field: location
+          
+  - name: stg_hotels_osm
+    description: "Staging model for OSM hotels CSV"
+    columns:
+      - name: osm_id
+        tests:
+          - not_null
+          - unique
+      - name: name
+        tests:
+          - not_null
+
+  - name: fact_hotels
+    description: "Fact table of hotels for marts"
+    columns:
+      - name: osm_id
+        tests:
+          - not_null

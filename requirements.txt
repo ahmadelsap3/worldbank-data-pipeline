@@ -3,3 +3,15 @@ pandas
 psycopg2-binary
 python-dotenv
 requests
+dagster
+dbt-core
+dbt-snowflake
+snowflake-connector-python
+spotipy
+pandas
+psycopg2-binary
+python-dotenv
+requests
+dagster
+dbt-core
+dbt-snowflake
