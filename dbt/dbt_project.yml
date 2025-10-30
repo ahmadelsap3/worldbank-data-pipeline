@@ -1,4 +1,4 @@
-name: hotels_egypt_project
+name: cairo_metro_gtfs
 version: '1.0'
 config-version: 2
 profile: hotels_egypt_profile
@@ -10,9 +10,11 @@ data-paths: ["data"]
 macro-paths: ["macros"]
 
 models:
-  hotels_egypt_project:
+  cairo_metro_gtfs:
     +materialized: view
     staging:
-      +schema: staging
+      +schema: RAW_staging
+    dimensions:
+      +schema: RAW
     marts:
-      +schema: marts
+      +schema: RAW_marts

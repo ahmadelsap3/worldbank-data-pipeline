@@ -1,46 +1,116 @@
 version: 2
 
 sources:
-  - name: local
+  - name: gtfs_raw
     database: ANALYTICS_DB
     schema: RAW
     tables:
-      - name: openaq_stream
-        identifier: OPENAQ_STREAM
-      - name: hotels_csv
+      - name: gtfs_trips
+        identifier: GTFS_TRIPS
+        description: "Raw GTFS transit trip data from Cairo Metro"
 
 models:
-  - name: stg_openaq
-    description: "Staging model for OpenAQ measurements (expects columns matching the NDJSON output)."
-    tests:
-      - not_null:
-          column_name: measurement_id
-      - not_null:
-          column_name: measured_at
-          
-  - name: fact_aq
-    description: "Fact table of air quality measurements."
-    tests:
-      - not_null:
-          column_name: measurement_id
-      - relationships:
-          to: ref('dim_station')
-          field: location
-          
-  - name: stg_hotels_osm
-    description: "Staging model for OSM hotels CSV"
+  - name: stg_gtfs
+    description: "Staging model for GTFS transit trip data"
     columns:
-      - name: osm_id
+      - name: trip_id
+        description: "Unique trip identifier"
         tests:
           - not_null
           - unique
-      - name: name
+      - name: route_id
+        description: "Route identifier (L1, L2, L3)"
         tests:
           - not_null
-
-  - name: fact_hotels
-    description: "Fact table of hotels for marts"
+      - name: trip_date
+        description: "Date of the trip"
+        tests:
+          - not_null
+      - name: ridership
+        description: "Number of passengers"
+        tests:
+          - not_null
+          
+  - name: dim_route
+    description: "Dimension table of Metro routes (Lines 1, 2, 3)"
     columns:
-      - name: osm_id
+      - name: route_pk
+        description: "Surrogate key for routes"
+        tests:
+          - not_null
+          - unique
+      - name: route_id
+        description: "Natural key (L1, L2, L3)"
+        tests:
+          - not_null
+          - unique
+          
+  - name: dim_stop
+    description: "Dimension table of Metro stations/stops"
+    columns:
+      - name: stop_pk
+        description: "Surrogate key for stops"
+        tests:
+          - not_null
+          - unique
+      - name: stop_id
+        description: "Natural key (stop identifier)"
+        tests:
+          - not_null
+          - unique
+      - name: stop_name
+        description: "Station name"
+        tests:
+          - not_null
+          
+  - name: dim_service
+    description: "Dimension table of service types (weekday, saturday, sunday)"
+    columns:
+      - name: service_pk
+        description: "Surrogate key for service types"
+        tests:
+          - not_null
+          - unique
+      - name: service_type
+        description: "Service type identifier"
+        tests:
+          - not_null
+          - unique
+          
+  - name: fact_trips
+    description: "Fact table of transit trips with ridership and performance metrics"
+    columns:
+      - name: trip_id
+        description: "Unique trip identifier"
+        tests:
+          - not_null
+          - unique
+      - name: route_id
+        description: "Foreign key to dim_route"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_route')
+              field: route_id
+      - name: origin_stop_id
+        description: "Foreign key to dim_stop (origin)"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_stop')
+              field: stop_id
+      - name: destination_stop_id
+        description: "Foreign key to dim_stop (destination)"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_stop')
+              field: stop_id
+      - name: ridership
+        description: "Number of passengers"
+        tests:
+          - not_null
+      - name: delay_minutes
+        description: "Delay in minutes"
         tests:
           - not_null

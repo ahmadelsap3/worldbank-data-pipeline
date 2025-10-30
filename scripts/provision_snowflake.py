@@ -1,7 +1,7 @@
-"""Provision Snowflake warehouse, database, schemas, and tables.
+"""Provision Snowflake warehouse, database, schemas, and tables for GTFS transit data.
 
-This script reads and executes all SQL files from sql/snowflake/ in lexical order,
-creating the necessary Snowflake objects for the ETL pipeline.
+This script creates all necessary Snowflake objects for the public transportation ETL pipeline,
+including the GTFS_TRIPS table for Cairo Metro data.
 
 Requires environment variables:
   SNOWFLAKE_ACCOUNT, SNOWFLAKE_USER, SNOWFLAKE_PASSWORD, SNOWFLAKE_ROLE (optional)
@@ -79,48 +79,103 @@ def execute_sql_file(cursor, connection, sql_file: Path):
             raise
 
 
+def create_gtfs_objects(cursor, connection):
+    """Create GTFS-specific Snowflake objects programmatically."""
+    
+    ddl_statements = [
+        # Create warehouse
+        """
+        CREATE WAREHOUSE IF NOT EXISTS ANALYTICS_WH
+            WITH WAREHOUSE_SIZE = 'XSMALL'
+            AUTO_SUSPEND = 60
+            AUTO_RESUME = TRUE
+            INITIALLY_SUSPENDED = TRUE
+        """,
+        
+        # Create database
+        "CREATE DATABASE IF NOT EXISTS ANALYTICS_DB",
+        
+        # Use database
+        "USE DATABASE ANALYTICS_DB",
+        
+        # Create schemas
+        "CREATE SCHEMA IF NOT EXISTS RAW",
+        "CREATE SCHEMA IF NOT EXISTS RAW_staging",
+        "CREATE SCHEMA IF NOT EXISTS RAW_marts",
+        
+        # Use RAW schema
+        "USE SCHEMA RAW",
+        
+        # Create GTFS trips table
+        """
+        CREATE TABLE IF NOT EXISTS GTFS_TRIPS (
+            trip_id VARCHAR(100) PRIMARY KEY,
+            route_id VARCHAR(50),
+            route_short_name VARCHAR(50),
+            route_long_name VARCHAR(200),
+            route_type NUMBER,
+            route_color VARCHAR(10),
+            direction_id NUMBER,
+            direction_name VARCHAR(20),
+            service_id VARCHAR(50),
+            trip_date DATE,
+            departure_time TIME,
+            arrival_time TIME,
+            origin_stop_id VARCHAR(50),
+            origin_stop_name VARCHAR(200),
+            origin_lat FLOAT,
+            origin_lon FLOAT,
+            destination_stop_id VARCHAR(50),
+            destination_stop_name VARCHAR(200),
+            destination_lat FLOAT,
+            destination_lon FLOAT,
+            num_stops NUMBER,
+            ridership NUMBER,
+            delay_minutes NUMBER,
+            on_time BOOLEAN,
+            generated_at TIMESTAMP_NTZ
+        )
+        """,
+    ]
+    
+    for i, stmt in enumerate(ddl_statements, 1):
+        try:
+            # Get first line for preview
+            first_line = stmt.strip().split('\n')[0].strip()[:60]
+            print(f"  → Executing: {first_line}...")
+            
+            cursor.execute(stmt)
+            connection.commit()
+            print(f"  ✓ Statement {i} completed")
+        except Exception as e:
+            print(f"  ✗ Statement {i} failed: {e}")
+            raise
+
+
 def main():
-    # Find the sql/snowflake directory
-    script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parent
-    sql_dir = repo_root / 'sql' / 'snowflake'
-    
-    if not sql_dir.exists():
-        print(f"ERROR: SQL directory not found: {sql_dir}")
-        sys.exit(1)
-    
-    # Get all .sql files (excluding the example COPY file)
-    sql_files = sorted([f for f in sql_dir.glob('*.sql') if f.name != '05_copy_into_example.sql'])
-    
-    if not sql_files:
-        print(f"ERROR: No SQL files found in {sql_dir}")
-        sys.exit(1)
-    
     print("=" * 70)
-    print("Snowflake Provisioning Script")
+    print("Snowflake Provisioning Script - GTFS Transit Data")
     print("=" * 70)
-    print(f"Found {len(sql_files)} SQL file(s) to execute:")
-    for f in sql_files:
-        print(f"  - {f.name}")
     
     # Connect and execute
     conn = get_snowflake_connection()
     cursor = conn.cursor()
     
     try:
-        for sql_file in sql_files:
-            execute_sql_file(cursor, conn, sql_file)
+        print("\nCreating Snowflake objects for GTFS data...")
+        create_gtfs_objects(cursor, conn)
         
         conn.commit()
         print("\n" + "=" * 70)
         print("✓ Snowflake provisioning completed successfully!")
         print("=" * 70)
         print("\nCreated:")
-        print("  - Warehouse: ANALYTICS_WH")
+        print("  - Warehouse: ANALYTICS_WH (XSMALL, auto-suspend 60s)")
         print("  - Database: ANALYTICS_DB")
-        print("  - Schemas: ANALYTICS_DB.RAW, ANALYTICS_DB.MODELS")
-        print("  - Table: ANALYTICS_DB.RAW.OPENAQ_STREAM")
-        print("  - Role: ANALYTICS_ROLE (with grants)")
+        print("  - Schemas: RAW, RAW_staging, RAW_marts")
+        print("  - Table: ANALYTICS_DB.RAW.GTFS_TRIPS")
+        print("    - 24 columns for transit trip data")
+        print("    - Supports Cairo Metro Lines 1, 2, 3")
         
     except Exception as e:
         conn.rollback()
