@@ -50,11 +50,12 @@ data/*.json
 
 # Jupyter Notebooks
 .ipynb_checkpoints/
-*.ipynb
 
 # Dagster
 dagster_home/
 .dagster/
+.snowflake_password_cache.txt
+orchestration/dagster/dagster.yaml
 
 # Logs
 *.log

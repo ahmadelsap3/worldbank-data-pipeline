@@ -1,0 +1,14 @@
+hotels_egypt_profile:
+  outputs:
+    dev:
+      type: snowflake
+      account: POKMPXO-ICB41863
+      user: AHMEDEHAB
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ACCOUNTADMIN
+      warehouse: ANALYTICS_WH
+      database: ANALYTICS_DB
+      schema: RAW
+      threads: 4
+      client_session_keep_alive: False
+  target: dev

@@ -1,381 +1,291 @@
-# Setup Guide for New Contributors
+# Setup Instructions
 
-Welcome! This guide will help you set up the air quality ETL pipeline on your local machine.
+Follow these steps to run the World Bank Data Pipeline on your local machine.
 
-## 📋 Prerequisites
+## Prerequisites
 
-Before starting, ensure you have:
+Before you begin, ensure you have:
 
-1. **Python 3.9+** (3.13 recommended)
-   - Download from: https://www.python.org/downloads/
-   - Verify: `python --version`
+- **Python 3.13+** (or Python 3.9+)
+- **Git** installed
+- **Snowflake Account** with:
+  - Account identifier (e.g., `POKMPXO-ICB41863`)
+  - Username and password
+  - ACCOUNTADMIN role or equivalent permissions
 
-2. **Git**
-   - Download from: https://git-scm.com/downloads
-   - Verify: `git --version`
+## Step-by-Step Setup
 
-3. **Snowflake Account**
-   - You'll need account credentials (contact project admin)
-   - Account ID, username, password, role
-
-4. **Power BI Desktop** (Optional - for visualization)
-   - Download from: https://powerbi.microsoft.com/desktop/
-
-## 🚀 Quick Start (5 Steps)
-
-### Step 1: Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ahmadelsap3/air-quality-etl-pipeline.git
-cd air-quality-etl-pipeline
+git clone https://github.com/ahmadelsap3/worldbank-data-pipeline.git
+cd worldbank-data-pipeline
 ```
 
-### Step 2: Create Virtual Environment
+### 2. Create Virtual Environment
 
-**Windows (PowerShell):**
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-```
-
-**macOS/Linux:**
 ```bash
+# Create virtual environment
 python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+
+# On macOS/Linux:
 source venv/bin/activate
 ```
 
-**Troubleshooting**: If PowerShell script execution is blocked:
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-### Step 3: Install Dependencies
+### 3. Install Dependencies
 
 ```bash
-pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 This will install:
-- `snowflake-connector-python` - Snowflake database connector
-- `dbt-core` and `dbt-snowflake` - Data transformation framework
-- `dagster` and `dagster-webserver` - Orchestration platform
-- `python-dotenv` - Environment variable management
+- pandas (data manipulation)
+- requests (API calls)
+- snowflake-connector-python (Snowflake connection)
+- dbt-core and dbt-snowflake (data transformations)
+- dagster and dagster-webserver (orchestration)
+- jupyter (interactive notebooks)
 
-### Step 4: Configure Environment Variables
+### 4. Configure Environment Variables
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root by copying the example:
 
 ```bash
-# Copy the example file
+# On Windows:
+copy .env.example .env
+
+# On macOS/Linux:
 cp .env.example .env
 ```
 
-Edit `.env` with your Snowflake credentials:
+Edit the `.env` file and add your Snowflake credentials:
 
 ```env
-# Snowflake Configuration
-SNOWFLAKE_ACCOUNT=YOUR_ACCOUNT_ID       # e.g., POKMPXO-ICB41863
-SNOWFLAKE_USER=YOUR_USERNAME            # e.g., AHMEDEHAB
-SNOWFLAKE_PASSWORD=YOUR_PASSWORD        # Your Snowflake password
-SNOWFLAKE_ROLE=ACCOUNTADMIN            # Or your assigned role
-SNOWFLAKE_WAREHOUSE=ANALYTICS_WH       # Will be created by provisioning script
-SNOWFLAKE_DATABASE=ANALYTICS_DB        # Will be created by provisioning script
-SNOWFLAKE_SCHEMA=RAW                   # Default schema
-
-# Optional: OpenAQ API (if using real data instead of mock)
-# OPENAQ_API_KEY=your_api_key_here
+SNOWFLAKE_ACCOUNT=your_account.region
+SNOWFLAKE_USER=your_username
+SNOWFLAKE_PASSWORD=your_password
+SNOWFLAKE_ROLE=ACCOUNTADMIN
+SNOWFLAKE_WAREHOUSE=ANALYTICS_WH
+SNOWFLAKE_DATABASE=ANALYTICS_DB
+SNOWFLAKE_SCHEMA=RAW
 ```
 
-**Important**: Never commit the `.env` file to Git (it's already in `.gitignore`)
+**Important:** 
+- Replace `your_account.region` with your Snowflake account identifier
+- Replace `your_username` and `your_password` with your credentials
+- The `.env` file is already in `.gitignore` and will NOT be committed to Git
 
-### Step 5: Configure dbt Profile
+### 5. Run the Pipeline
 
-The pipeline uses dbt for data transformations. Configure your profile:
+You have two options to run the pipeline:
 
-**Windows:**
-```powershell
-# Create .dbt directory if it doesn't exist
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.dbt"
-
-# Create profiles.yml
-@"
-hotels_egypt_profile:
-  outputs:
-    dev:
-      type: snowflake
-      account: YOUR_ACCOUNT_ID
-      user: YOUR_USERNAME
-      password: YOUR_PASSWORD
-      role: ACCOUNTADMIN
-      database: ANALYTICS_DB
-      warehouse: ANALYTICS_WH
-      schema: RAW
-      threads: 4
-      client_session_keep_alive: False
-  target: dev
-"@ | Out-File -FilePath "$env:USERPROFILE\.dbt\profiles.yml" -Encoding UTF8
-```
-
-**macOS/Linux:**
-```bash
-mkdir -p ~/.dbt
-cat > ~/.dbt/profiles.yml <<EOF
-hotels_egypt_profile:
-  outputs:
-    dev:
-      type: snowflake
-      account: YOUR_ACCOUNT_ID
-      user: YOUR_USERNAME
-      password: YOUR_PASSWORD
-      role: ACCOUNTADMIN
-      database: ANALYTICS_DB
-      warehouse: ANALYTICS_WH
-      schema: RAW
-      threads: 4
-      client_session_keep_alive: False
-  target: dev
-EOF
-```
-
-**Replace**: `YOUR_ACCOUNT_ID`, `YOUR_USERNAME`, `YOUR_PASSWORD` with your actual credentials.
-
-## ✅ Verify Installation
-
-### Test Python and Dependencies
+#### Option A: Interactive Jupyter Notebook (Recommended for first run)
 
 ```bash
-python --version           # Should show 3.9+
-pip list | grep snowflake  # Should show snowflake-connector-python
-pip list | grep dbt        # Should show dbt-core and dbt-snowflake
-```
-
-### Test dbt Configuration
-
-```bash
-cd dbt
-dbt debug
-```
-
-Expected output:
-```
-Connection test: [OK connection ok]
-```
-
-If you see errors, check your `~/.dbt/profiles.yml` configuration.
-
-### Test Snowflake Connection
-
-```bash
-python -c "from scripts.provision_snowflake import get_snowflake_connection; conn = get_snowflake_connection(); print('✅ Connection successful')"
-```
-
-## 🏃 Run the Pipeline
-
-Once everything is set up, run the complete pipeline:
-
-```bash
-python scripts/run_full_pipeline.py
+jupyter notebook notebooks/worldbank_data_pipeline.ipynb
 ```
 
 This will:
-1. ✅ Provision Snowflake warehouse, database, schemas, and tables
-2. ✅ Generate 100 mock air quality records
-3. ✅ Upload data to Snowflake
-4. ✅ Run dbt transformations (4 models)
-5. ✅ Verify data quality
+1. Open Jupyter in your browser
+2. Allow you to run cells step-by-step
+3. Fetch World Bank data (7 countries, 7 indicators, 2010-2023)
+4. Load ~600+ records into Snowflake
+
+**Execute all cells in order** by clicking "Cell" → "Run All" or using Shift+Enter on each cell.
+
+#### Option B: Automated with Dagster
+
+```bash
+dagster dev -f orchestration/dagster/worldbank_pipeline.py
+```
+
+This will:
+1. Start Dagster web UI at http://localhost:3000
+2. Open the URL in your browser
+3. Navigate to "Assets" tab
+4. Click "Materialize all" to run the complete pipeline
+
+The Dagster pipeline will:
+- Fetch data from World Bank API
+- Provision Snowflake objects (warehouse, database, schemas, tables)
+- Load data to Snowflake
+- Run dbt transformations
+
+### 6. Run dbt Transformations (if using Option A)
+
+If you used the Jupyter notebook, run dbt separately:
+
+```bash
+cd dbt
+dbt run
+dbt test
+```
+
+This creates:
+- **Staging view**: `STG_WORLDBANK` in `RAW_STAGING` schema
+- **Dimension tables**: `DIM_COUNTRY`, `DIM_INDICATOR` in `RAW` schema
+- **Fact table**: `FACT_WORLDBANK` in `RAW_MARTS` schema
 
 Expected output:
-```
-=== Starting Full Pipeline Execution ===
+- `dbt run`: 4 models created (PASS=4)
+- `dbt test`: 21 tests passed (PASS=21)
 
-[1/5] Provisioning Snowflake objects...
-✓ Created warehouse ANALYTICS_WH
-✓ Created database ANALYTICS_DB
-✓ Created schemas: RAW, RAW_staging, RAW_marts
-✓ Created table: OPENAQ_STREAM
+### 7. Verify the Pipeline
 
-[2/5] Generating mock data...
-✓ Wrote 100 mock measurements to data/openaq_data.ndjson
-
-[3/5] Uploading to Snowflake...
-✓ Uploaded 100 rows to ANALYTICS_DB.RAW.OPENAQ_STREAM
-
-[4/5] Running dbt transformations...
-1 of 4 OK created sql view model RAW_staging.stg_openaq
-2 of 4 OK created sql view model RAW.dim_parameter
-3 of 4 OK created sql view model RAW.dim_station
-4 of 4 OK created sql view model RAW_marts.fact_aq
-Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
-
-[5/5] Running dbt tests...
-Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
-
-=== Pipeline completed successfully! ===
-```
-
-## 📊 Query the Data
-
-After running the pipeline, you can query the transformed data:
+Connect to Snowflake and run these queries to verify:
 
 ```sql
--- Connect to Snowflake and run:
+-- Check raw data
+SELECT COUNT(*) FROM ANALYTICS_DB.RAW.WORLDBANK_INDICATORS;
+-- Expected: ~600+ rows
 
--- View all air quality measurements
-SELECT * FROM ANALYTICS_DB.RAW_marts.FACT_AQ LIMIT 10;
+-- Check staging view
+SELECT COUNT(*) FROM ANALYTICS_DB.RAW_STAGING.STG_WORLDBANK;
+-- Expected: ~600+ rows (same as raw, but cleaned)
 
--- View monitoring stations
-SELECT * FROM ANALYTICS_DB.RAW.DIM_STATION;
+-- Check dimensions
+SELECT COUNT(*) FROM ANALYTICS_DB.RAW.DIM_COUNTRY;
+-- Expected: 7 rows
 
--- View measured parameters
-SELECT * FROM ANALYTICS_DB.RAW.DIM_PARAMETER;
+SELECT COUNT(*) FROM ANALYTICS_DB.RAW.DIM_INDICATOR;
+-- Expected: 7 rows
 
--- Average PM2.5 by city
+-- Check fact table
+SELECT COUNT(*) FROM ANALYTICS_DB.RAW_MARTS.FACT_WORLDBANK;
+-- Expected: ~600+ rows
+
+-- View sample data
 SELECT 
-    "city",
-    AVG("value") as avg_pm25
-FROM ANALYTICS_DB.RAW_marts.FACT_AQ
-WHERE "parameter" = 'pm25'
-GROUP BY "city"
-ORDER BY avg_pm25 DESC;
+    COUNTRY_NAME,
+    INDICATOR_NAME,
+    YEAR,
+    VALUE
+FROM ANALYTICS_DB.RAW_MARTS.FACT_WORLDBANK
+LIMIT 10;
 ```
 
-## 🐛 Common Issues & Solutions
+## Troubleshooting
 
-### Issue 1: Python Not Found
+### Issue: Cannot connect to Snowflake
 
-**Error**: `python: command not found`
+**Solution:**
+- Verify your `.env` file has correct credentials
+- Check your Snowflake account is active
+- Ensure your user has ACCOUNTADMIN role or CREATE permissions
+- Test connection with:
+  ```python
+  import snowflake.connector
+  conn = snowflake.connector.connect(
+      account='your_account',
+      user='your_username',
+      password='your_password'
+  )
+  print("✅ Connected!")
+  ```
 
-**Solution**:
-- Windows: Add Python to PATH during installation, or use `py` instead of `python`
-- macOS/Linux: Install Python via package manager (`brew install python3` or `apt install python3`)
+### Issue: dbt command not found
 
-### Issue 2: pip Install Fails
+**Solution:**
+- Make sure virtual environment is activated: `venv\Scripts\activate`
+- Reinstall dbt: `pip install dbt-core dbt-snowflake`
+- Check installation: `dbt --version`
 
-**Error**: `pip: command not found` or permission errors
+### Issue: Module not found errors
 
-**Solution**:
-```bash
-# Upgrade pip first
-python -m pip install --upgrade pip
+**Solution:**
+- Activate virtual environment: `venv\Scripts\activate`
+- Reinstall all packages: `pip install -r requirements.txt`
 
-# Use python -m pip instead of pip directly
-python -m pip install -r requirements.txt
-```
+### Issue: dbt profile not found
 
-### Issue 3: PowerShell Script Execution Policy
+**Solution:**
+- The `dbt/profiles.yml` file should be in the `dbt/` folder
+- dbt will read the password from your `.env` file automatically
+- If issues persist, run: `dbt debug` to check configuration
 
-**Error**: `cannot be loaded because running scripts is disabled`
+### Issue: Dagster aborts immediately
 
-**Solution**:
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+**Solution:**
+- Make sure `.env` file exists and has your password
+- Try running in a new terminal window
+- Check if port 3000 is already in use: `netstat -ano | findstr :3000`
+- If occupied, kill the process or use a different port: `dagster dev -f orchestration/dagster/worldbank_pipeline.py -p 3001`
 
-### Issue 4: Snowflake Connection Failed
+### Issue: No data in Snowflake tables
 
-**Error**: `250001: Could not connect to Snowflake backend`
+**Solution:**
+- Rerun the Jupyter notebook or Dagster pipeline
+- Check the notebook output for errors
+- Verify API connection: World Bank API might be slow or temporarily unavailable
+- Try reducing the year range if needed
 
-**Solutions**:
-1. Verify account ID format: `ACCOUNT-REGION` (e.g., `POKMPXO-ICB41863`)
-2. Check username and password are correct
-3. Ensure your IP is not blocked by firewall
-4. Verify network connectivity: `ping your_account.snowflakecomputing.com`
+## What Gets Created
 
-### Issue 5: dbt Compilation Errors
+After running the full pipeline, you'll have:
 
-**Error**: `invalid identifier 'COLUMN_NAME'`
+### Snowflake Objects
 
-**Solution**:
-- All Snowflake column names must use quoted identifiers: `"column_name"`
-- Check your dbt models use quotes consistently
-- This project already has proper quoting in all models
+| Object | Type | Location | Purpose |
+|--------|------|----------|---------|
+| ANALYTICS_WH | Warehouse | - | Compute resources |
+| ANALYTICS_DB | Database | - | Container for all data |
+| RAW | Schema | ANALYTICS_DB | Raw data tables |
+| RAW_STAGING | Schema | ANALYTICS_DB | Staging views |
+| RAW_MARTS | Schema | ANALYTICS_DB | Analytics fact tables |
+| WORLDBANK_INDICATORS | Table | RAW | Raw API data (~600+ rows) |
+| STG_WORLDBANK | View | RAW_STAGING | Cleaned staging data |
+| DIM_COUNTRY | Table | RAW | Country dimension (7 rows) |
+| DIM_INDICATOR | Table | RAW | Indicator dimension (7 rows) |
+| FACT_WORLDBANK | Table | RAW_MARTS | Analytics fact table (~600+ rows) |
 
-### Issue 6: Module Import Errors
+### Data Fetched
 
-**Error**: `ModuleNotFoundError: No module named 'snowflake'`
+- **Countries**: Egypt, Saudi Arabia, UAE, Jordan, Nigeria, South Africa, Kenya
+- **Indicators**:
+  1. Population, total
+  2. GDP (current US$)
+  3. Life expectancy at birth, total (years)
+  4. Mortality rate, infant (per 1,000 live births)
+  5. Literacy rate, adult total (% of people ages 15 and above)
+  6. CO2 emissions (metric tons per capita)
+  7. Access to electricity (% of population)
+- **Time Range**: 2010-2023
+- **Total Records**: ~600+ (varies based on data availability)
 
-**Solution**:
-1. Ensure virtual environment is activated (you should see `(venv)` in prompt)
-2. Reinstall dependencies: `pip install -r requirements.txt`
-3. Verify installation: `pip list | grep snowflake`
+## Next Steps
 
-## 📁 Project Structure Overview
+Once the pipeline is running successfully:
 
-```
-air-quality-etl-pipeline/
-├── scripts/                     # Python automation scripts
-│   ├── provision_snowflake.py   # Creates Snowflake objects
-│   ├── generate_mock_openaq.py  # Generates test data
-│   ├── upload_mock_data.py      # Uploads to Snowflake
-│   └── run_full_pipeline.py     # Master automation script
-├── dbt/                         # Data transformation models
-│   ├── models/
-│   │   ├── staging/             # Staging layer
-│   │   ├── dimensions/          # Dimension tables
-│   │   └── marts/               # Fact tables
-│   └── dbt_project.yml          # dbt configuration
-├── orchestration/               # Dagster orchestration
-│   └── dagster/
-│       └── snowflake_uploader.py
-├── data/                        # Generated data files
-├── .env                         # Your credentials (create this)
-├── .env.example                 # Template for .env
-├── requirements.txt             # Python dependencies
-├── README.md                    # Main documentation
-└── SETUP.md                     # This file
-```
+1. **Explore the data** using SQL queries in Snowflake
+2. **Modify indicators** by editing the notebook to fetch different World Bank indicators
+3. **Add more countries** by expanding the country list
+4. **Create visualizations** by connecting Power BI or Tableau to Snowflake
+5. **Schedule automated runs** using Dagster schedules or sensors
+6. **Add custom dbt tests** for data quality validation
 
-## 🎓 Learning Resources
+## Need Help?
 
-### Snowflake
-- [Snowflake Getting Started](https://docs.snowflake.com/en/user-guide-getting-started.html)
-- [Snowflake SQL Reference](https://docs.snowflake.com/en/sql-reference.html)
+If you encounter issues not covered here:
 
-### dbt
-- [dbt Tutorial](https://docs.getdbt.com/tutorial/learning-more/getting-started-dbt-core)
-- [dbt Best Practices](https://docs.getdbt.com/guides/best-practices)
+1. Check the main [README.md](README.md) for architecture details
+2. Review dbt model files in `dbt/models/` to understand transformations
+3. Check Dagster pipeline code in `orchestration/dagster/worldbank_pipeline.py`
+4. Ensure all environment variables are correctly set in `.env`
 
-### Dagster
-- [Dagster Tutorial](https://docs.dagster.io/tutorial)
-- [Dagster Concepts](https://docs.dagster.io/concepts)
+## Summary Checklist
 
-## 🤝 Getting Help
+- [ ] Python 3.9+ installed
+- [ ] Repository cloned
+- [ ] Virtual environment created and activated
+- [ ] Dependencies installed (`pip install -r requirements.txt`)
+- [ ] `.env` file created with Snowflake credentials
+- [ ] Jupyter notebook executed OR Dagster pipeline materialized
+- [ ] dbt transformations run successfully
+- [ ] Data verified in Snowflake
+- [ ] ~600+ rows in FACT_WORLDBANK table
 
-If you encounter issues:
-
-1. **Check the main README**: `README.md` has comprehensive troubleshooting
-2. **Review logs**: Check `dbt/logs/dbt.log` for dbt errors
-3. **Test components individually**:
-   ```bash
-   # Test Snowflake provisioning
-   python scripts/provision_snowflake.py
-   
-   # Test data generation
-   python scripts/generate_mock_openaq.py
-   
-   # Test dbt models
-   cd dbt
-   dbt run
-   dbt test
-   ```
-4. **Contact the team**: Open an issue on GitHub or reach out to project maintainers
-
-## 🎯 Next Steps After Setup
-
-1. **Explore the data**: Run queries in Snowflake to understand the schema
-2. **Review dbt models**: Check `dbt/models/` to see transformation logic
-3. **Connect Power BI**: Follow the Power BI guide in `README.md`
-4. **Modify and extend**: Try adding new dbt models or data sources
-5. **Run tests**: Execute `dbt test` to ensure data quality
-
-## ✨ You're Ready!
-
-Once you've completed these steps, you should have:
-- ✅ Working Python environment with all dependencies
-- ✅ Snowflake connection configured
-- ✅ dbt profile set up
-- ✅ Data loaded and transformed
-- ✅ All models tested and passing
-
-Happy coding! 🚀
+✅ **Pipeline is ready!** You can now query and analyze World Bank data in Snowflake.

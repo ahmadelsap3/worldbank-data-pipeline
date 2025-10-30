@@ -1,223 +1,822 @@
-# Data Exploration, Preparation, and Visualization Pipeline
+# World Bank Data Pipeline# World Bank Data Pipeline# World Bank Data Pipeline
 
-An automated ETL pipeline for air quality data using **Snowflake**, **dbt**, and **Dagster**, with visualization capabilities in **Power BI**.
 
-## 🏗️ Architecture
+
+An automated ETL pipeline that fetches World Bank development indicators, loads them into Snowflake, transforms the data using dbt, and orchestrates the entire process with Dagster.
+
+
+
+## 🏗️ ArchitectureAn automated ETL pipeline that fetches World Bank development indicators, loads them into Snowflake, transforms the data using dbt, and orchestrates the entire process with Dagster.An automated ETL pipeline that fetches World Bank development indicators, loads them into Snowflake, transforms the data using dbt, and orchestrates the entire process with Dagster.
+
+
 
 ```
-OpenAQ API (Air Quality Data)
-         ↓
-    Python Streamer (NDJSON)
-         ↓
-    Dagster Orchestration
-         ↓
+
+World Bank API
+
+      ↓## 🏗️ Architecture
+
+Python ETL (Pandas)
+
+      ↓
+
 Snowflake Data Warehouse
-    ├── RAW Schema (raw ingestion)
-    ├── RAW_staging Schema (staging views)
-    └── RAW_marts Schema (fact tables)
-         ├── Staging (stg_openaq)
-         ├── Dimensions (dim_station, dim_parameter)
-         └── Marts (fact_aq)
-         ↓
-    Power BI Dashboard
+
+  ├── RAW Schema```This project implements a complete ETL pipeline for World Bank development indicators using:## 🏗️ Architecture
+
+  ├── RAW_STAGING Schema
+
+  └── RAW_MARTS SchemaWorld Bank API
+
+      ↓
+
+dbt Transformations      ↓- **Extraction**: World Bank Open Data API
+
+  ├── Staging
+
+  ├── DimensionsPython ETL (Pandas)
+
+  └── Marts
+
+      ↓      ↓- **Transformation**: dbt (data build tool)```
+
+Dagster Orchestration
+
+```Snowflake Data Warehouse
+
+
+
+## 📋 Prerequisites  ├── RAW Schema (raw tables)- **Loading**: Snowflake data warehouseOpenAQ API (Air Quality Data)
+
+
+
+- Python 3.13+ (or 3.9+)  ├── RAW_STAGING Schema (staging views)
+
+- Snowflake Account
+
+- Git  └── RAW_MARTS Schema (fact tables)- **Orchestration**: Dagster         ↓
+
+
+
+## 🚀 Quick Start      ↓
+
+
+
+### 1. Clone the Repositorydbt Transformations    Python Streamer (NDJSON)
+
+
+
+```bash  ├── Staging: stg_worldbank
+
+git clone https://github.com/ahmadelsap3/air-quality-etl-pipeline.git
+
+cd air-quality-etl-pipeline  ├── Dimensions: dim_country, dim_indicator## 🚀 Quick Start         ↓
+
 ```
 
-## 📋 Prerequisites
+  └── Marts: fact_worldbank
 
-- **Python 3.13+** (or 3.9+)
-- **Snowflake Account** (Enterprise or higher recommended)
-- **Git** (for version control)
-- **Power BI Desktop** (optional, for visualization)
+### 2. Set Up Python Environment
 
-## 🚀 Quick Start
-
-### 1. Clone the Repository
+      ↓    Dagster Orchestration
 
 ```bash
-git clone https://github.com/ahmadelsap3/Data-Exploration-Preparation-and-Visualization-final-project.git
-cd Data-Exploration-Preparation-and-Visualization-final-project
+
+# Create and activate virtual environmentDagster Orchestration
+
+python -m venv venv
+
+```### 1. Configure Environment         ↓
+
+# Windows
+
+venv\Scripts\activate
+
+
+
+# macOS/Linux## 📋 PrerequisitesSnowflake Data Warehouse
+
+source venv/bin/activate
+
+
+
+# Install dependencies
+
+pip install -r requirements.txt- **Python 3.13+** (or 3.9+)Create `.env` file:    ├── RAW Schema (raw ingestion)
+
+```
+
+- **Snowflake Account**
+
+### 3. Configure Environment Variables
+
+- **Git**```env    ├── RAW_staging Schema (staging views)
+
+Create a `.env` file in the project root:
+
+
+
+```env
+
+SNOWFLAKE_ACCOUNT=your_account.region## 🚀 Quick StartSNOWFLAKE_ACCOUNT=your_account    └── RAW_marts Schema (fact tables)
+
+SNOWFLAKE_USER=your_username
+
+SNOWFLAKE_PASSWORD=your_password
+
+SNOWFLAKE_ROLE=ACCOUNTADMIN
+
+SNOWFLAKE_WAREHOUSE=ANALYTICS_WH### 1. Clone the RepositorySNOWFLAKE_USER=your_username         ├── Staging (stg_openaq)
+
+SNOWFLAKE_DATABASE=ANALYTICS_DB
+
+SNOWFLAKE_SCHEMA=RAW
+
+```
+
+```bashSNOWFLAKE_PASSWORD=your_password         ├── Dimensions (dim_station, dim_parameter)
+
+**Note:** The `.env` file is already in `.gitignore` and will not be uploaded to GitHub.
+
+git clone https://github.com/ahmadelsap3/air-quality-etl-pipeline.git
+
+### 4. Run the Pipeline
+
+cd air-quality-etl-pipelineSNOWFLAKE_ROLE=ACCOUNTADMIN         └── Marts (fact_aq)
+
+**Option A: Using Jupyter Notebook (Interactive)**
+
+```
+
+```bash
+
+jupyter notebook notebooks/worldbank_data_pipeline.ipynbSNOWFLAKE_WAREHOUSE=ANALYTICS_WH         ↓
+
 ```
 
 ### 2. Set Up Python Environment
 
-```bash
-python -m venv venv
-venv\Scripts\activate  # On Windows
-pip install -r requirements.txt
-```
+Execute all cells to:
 
-### 3. Configure Environment Variables
+- Fetch World Bank data for 7 countries and 7 indicators (2010-2023)SNOWFLAKE_DATABASE=ANALYTICS_DB    Power BI Dashboard
 
-Create a `.env` file with your Snowflake credentials:
+- Transform and enrich the data
 
-```env
-SNOWFLAKE_ACCOUNT=your_account.region
-SNOWFLAKE_USER=your_username
-SNOWFLAKE_PASSWORD=your_password
-SNOWFLAKE_ROLE=ACCOUNTADMIN
-SNOWFLAKE_WAREHOUSE=ANALYTICS_WH
-SNOWFLAKE_DATABASE=ANALYTICS_DB
-SNOWFLAKE_SCHEMA=RAW
-```
+- Load ~600+ records into Snowflake```bash
 
-### 4. Run the Pipeline
 
-```bash
-python scripts/run_full_pipeline.py
-```
 
-This will:
-- Provision Snowflake objects (warehouse, database, schemas, tables)
-- Generate mock air quality data (100 rows)
-- Upload data to Snowflake
-- Run dbt transformations
-- Create staging views, dimension tables, and fact tables
+**Option B: Using Dagster (Automated)**# Create and activate virtual environmentSNOWFLAKE_SCHEMA=RAW```
+
+
+
+```bashpython -m venv venv
+
+dagster dev -f orchestration/dagster/worldbank_pipeline.py
+
+```venv\Scripts\activate  # Windows```
+
+
+
+Then open http://localhost:3000 and click **"Materialize all"** to run the complete pipeline.# source venv/bin/activate  # macOS/Linux
+
+
+
+### 5. Run dbt Transformations## 📋 Prerequisites
+
+
+
+```bash# Install dependencies
+
+cd dbt
+
+dbt runpip install -r requirements.txt### 2. Run the Pipeline
+
+dbt test
+
+``````
+
+
+
+This creates:- **Python 3.13+** (or 3.9+)
+
+- **Staging view**: STG_WORLDBANK
+
+- **Dimension tables**: DIM_COUNTRY, DIM_INDICATOR### 3. Configure Environment Variables
+
+- **Fact table**: FACT_WORLDBANK
+
+**Option A: Interactive Notebook**- **Snowflake Account** (Enterprise or higher recommended)
 
 ## 📁 Project Structure
 
+Create a `.env` file in the project root:
+
 ```
-Data-Exploration-Preparation-and-Visualization-final-project/
-├── scripts/
-│   ├── provision_snowflake.py      # Snowflake DDL automation
-│   ├── generate_mock_openaq.py     # Mock data generator
-│   ├── upload_mock_data.py         # Snowflake data uploader
-│   └── run_full_pipeline.py        # Complete pipeline automation
-├── dbt/
-│   ├── models/
-│   │   ├── staging/
-│   │   │   └── stg_openaq.sql      # Staging model
-│   │   ├── dimensions/
-│   │   │   ├── dim_station.sql     # Station dimension
-│   │   │   └── dim_parameter.sql   # Parameter dimension
-│   │   └── marts/
-│   │       └── fact_aq.sql         # Air quality fact table
+
+air-quality-etl-pipeline/```bash- **Git** (for version control)
+
+├── .env                           # Environment variables (not in Git)
+
+├── .gitignore                     # Git ignore rules```env
+
+├── requirements.txt               # Python dependencies
+
+├── notebooks/SNOWFLAKE_ACCOUNT=your_account.regionjupyter notebook notebooks/worldbank_data_pipeline.ipynb- **Power BI Desktop** (optional, for visualization)
+
+│   └── worldbank_data_pipeline.ipynb
+
+├── dbt/SNOWFLAKE_USER=your_username
+
 │   ├── dbt_project.yml
-│   └── profiles.yml                # Located at C:\Users\ahmad\.dbt\profiles.yml
+
+│   ├── profiles.ymlSNOWFLAKE_PASSWORD=your_password```
+
+│   └── models/
+
+│       ├── staging/SNOWFLAKE_ROLE=ACCOUNTADMIN
+
+│       │   └── stg_worldbank.sql
+
+│       ├── dimensions/SNOWFLAKE_WAREHOUSE=ANALYTICS_WH## 🚀 Quick Start
+
+│       │   ├── dim_country.sql
+
+│       │   └── dim_indicator.sqlSNOWFLAKE_DATABASE=ANALYTICS_DB
+
+│       └── marts/
+
+│           └── fact_worldbank.sqlSNOWFLAKE_SCHEMA=RAW**Option B: Automated with Dagster**
+
 ├── orchestration/
-│   └── dagster/
-│       └── snowflake_uploader.py   # Dagster pipeline
-├── data/
-│   └── openaq_data.ndjson          # Generated mock data
-├── requirements.txt
-├── .env                             # Your environment variables
-└── README.md
+
+│   └── dagster/```
+
+│       └── worldbank_pipeline.py
+
+├── data/```bash### 1. Clone the Repository
+
+│   └── gtfs_data.ndjson
+
+└── venv/                          # Active Python environment> **Note**: The `.env` file is already in `.gitignore` and will not be uploaded to GitHub.
+
 ```
 
-## 🔧 Components
+dagster dev -f orchestration/dagster/worldbank_pipeline.py
 
-### Snowflake Objects
+## 📊 Data Pipeline Details
 
-| Object Type | Name | Purpose |
+### 4. Run the Pipeline
+
+### Data Fetched
+
+``````bash
+
+- **7 Indicators**: Population, GDP, Life Expectancy, Infant Mortality, Literacy Rate, CO2 Emissions, Access to Electricity
+
+- **7 Countries**: Egypt, Saudi Arabia, UAE, Jordan, Nigeria, South Africa, Kenya**Option A: Using Jupyter Notebook (Interactive)**
+
+- **Time Range**: 2010-2023
+
+- **Total Records**: ~600+ measurementsgit clone https://github.com/ahmadelsap3/Data-Exploration-Preparation-and-Visualization-final-project.git
+
+
+
+### Snowflake Objects Created```bash
+
+
+
+| Object | Schema | Description |jupyter notebook notebooks/worldbank_data_pipeline.ipynbThen open http://localhost:3000 and materialize the assets.cd Data-Exploration-Preparation-and-Visualization-final-project
+
+|--------|--------|-------------|
+
+| WORLDBANK_INDICATORS | RAW | Raw data table |```
+
+| STG_WORLDBANK | RAW_STAGING | Cleaned staging view |
+
+| DIM_COUNTRY | RAW | Country dimension |```
+
+| DIM_INDICATOR | RAW | Indicator dimension |
+
+| FACT_WORLDBANK | RAW_MARTS | Analytics fact table |Execute all cells to:
+
+
+
+### dbt Models## 📊 What Gets Created
+
+
+
+1. **stg_worldbank**: Staging view that filters null values- Fetch World Bank data for 7 countries and 7 indicators (2010-2023)
+
+2. **dim_country**: Deduplicated country dimension with surrogate keys
+
+3. **dim_indicator**: Deduplicated indicator dimension with metadata- Transform and enrich the data### 2. Set Up Python Environment
+
+4. **fact_worldbank**: Main fact table for analysis
+
+- Load ~600+ records into Snowflake
+
+## 🔧 Dagster Pipeline
+
+- **7 indicators** (Population, GDP, Life Expectancy, etc.)
+
+The pipeline consists of 4 assets:
+
+**Option B: Using Dagster (Automated)**
+
+1. **fetch_worldbank_data**: Fetches data from World Bank API
+
+2. **provision_snowflake_objects**: Creates warehouse, database, schemas, tables- **7 countries** (Egypt, Saudi Arabia, UAE, Jordan, Nigeria, South Africa, Kenya)```bash
+
+3. **load_to_snowflake**: Loads data using batch inserts (1000 rows/batch)
+
+4. **run_dbt_models**: Executes dbt transformations```bash
+
+
+
+## 💻 Query Examplesdagster dev -f orchestration/dagster/worldbank_pipeline.py- **2010-2023** time rangepython -m venv venv
+
+
+
+```sql```
+
+-- View all countries
+
+SELECT * FROM ANALYTICS_DB.RAW.DIM_COUNTRY;- **~600+ records** loaded to Snowflakevenv\Scripts\activate  # On Windows
+
+
+
+-- View all indicatorsThen open http://localhost:3000 in your browser and click "Materialize all" to run the complete pipeline.
+
+SELECT * FROM ANALYTICS_DB.RAW.DIM_INDICATOR;
+
+- **4 dbt models**: staging → dimensions → fact tablepip install -r requirements.txt
+
+-- Get GDP trends for Egypt
+
+SELECT ### 5. Run dbt Transformations
+
+    YEAR,
+
+    VALUE as GDP```
+
+FROM ANALYTICS_DB.RAW_MARTS.FACT_WORLDBANK
+
+WHERE COUNTRY_NAME = 'Egypt' ```bash
+
+  AND INDICATOR_NAME = 'GDP (current US$)'
+
+ORDER BY YEAR DESC;cd dbt## 🔗 Documentation
+
+
+
+-- Compare life expectancy across countries in 2023dbt run
+
+SELECT 
+
+    COUNTRY_NAME,dbt test### 3. Configure Environment Variables
+
+    VALUE as LIFE_EXPECTANCY
+
+FROM ANALYTICS_DB.RAW_MARTS.FACT_WORLDBANK```
+
+WHERE INDICATOR_NAME = 'Life expectancy at birth, total (years)'
+
+  AND YEAR = 2023- See `WORLDBANK_QUICKSTART.md` for detailed setup
+
+ORDER BY VALUE DESC;
+
+```This creates:
+
+
+
+## 🐛 Troubleshooting- See `PIPELINE_README.md` (this file) for architecture detailsCreate a `.env` file with your Snowflake credentials:
+
+
+
+### Dagster won't start- **Staging view**: `STG_WORLDBANK` (cleans and standardizes data)
+
+
+
+Ensure password is set in `.env` file and run:- **Dimension tables**: `DIM_COUNTRY`, `DIM_INDICATOR`
+
+
+
+```bash- **Fact table**: `FACT_WORLDBANK` (analytics-ready data)
+
+dagster dev -f orchestration/dagster/worldbank_pipeline.py
+
+```## 📁 Key Files```env
+
+
+
+### dbt column name errors## 📁 Project Structure
+
+
+
+Snowflake column names are case-sensitive. All dbt models use UPPERCASE column references.SNOWFLAKE_ACCOUNT=your_account.region
+
+
+
+### Snowflake connection issues```
+
+
+
+Verify your `.env` file has:air-quality-etl-pipeline/- `notebooks/worldbank_data_pipeline.ipynb` - Interactive explorationSNOWFLAKE_USER=your_username
+
+- Correct account identifier (format: `account.region`)
+
+- Valid username and password├── .env                          # Environment variables (not in Git)
+
+- Role with sufficient permissions (ACCOUNTADMIN recommended)
+
+├── .gitignore                    # Git ignore rules- `orchestration/dagster/worldbank_pipeline.py` - Automated pipelineSNOWFLAKE_PASSWORD=your_password
+
+### Python package errors
+
+├── requirements.txt              # Python dependencies
+
+Ensure you're using the correct virtual environment:
+
+│- `dbt/models/` - Data transformations (SQL)SNOWFLAKE_ROLE=ACCOUNTADMIN
+
+```bash
+
+# Activate venv├── notebooks/
+
+venv\Scripts\activate  # Windows
+
+source venv/bin/activate  # macOS/Linux│   └── worldbank_data_pipeline.ipynb  # Interactive ETL notebookSNOWFLAKE_WAREHOUSE=ANALYTICS_WH
+
+
+
+# Reinstall if needed│SNOWFLAKE_DATABASE=ANALYTICS_DB
+
+pip install -r requirements.txt
+
+```├── dbt/SNOWFLAKE_SCHEMA=RAW
+
+
+
+## 🔑 Environment Variables│   ├── dbt_project.yml          # dbt configuration```
+
+
+
+| Variable | Description | Example |│   ├── profiles.yml             # Snowflake connection config
+
+|----------|-------------|---------|
+
+| SNOWFLAKE_ACCOUNT | Account identifier | POKMPXO-ICB41863 |│   └── models/### 4. Run the Pipeline
+
+| SNOWFLAKE_USER | Username | AHMEDEHAB |
+
+| SNOWFLAKE_PASSWORD | Password | your_secure_password |│       ├── staging/
+
+| SNOWFLAKE_ROLE | Role | ACCOUNTADMIN |
+
+| SNOWFLAKE_WAREHOUSE | Warehouse name | ANALYTICS_WH |│       │   └── stg_worldbank.sql     # Staging view```bash
+
+| SNOWFLAKE_DATABASE | Database name | ANALYTICS_DB |
+
+| SNOWFLAKE_SCHEMA | Default schema | RAW |│       ├── dimensions/python scripts/run_full_pipeline.py
+
+
+
+## 📈 Next Steps│       │   ├── dim_country.sql       # Country dimension```
+
+
+
+- Add scheduling with Dagster sensors or schedules│       │   └── dim_indicator.sql     # Indicator dimension
+
+- Extend indicator list in the notebook
+
+- Connect Power BI or Tableau for visualizations│       └── marts/This will:
+
+- Implement custom dbt data quality tests
+
+- Set up CI/CD with GitHub Actions│           └── fact_worldbank.sql    # Fact table- Provision Snowflake objects (warehouse, database, schemas, tables)
+
+
+
+## 🤝 Contributing│- Generate mock air quality data (100 rows)
+
+
+
+1. Fork the repository├── orchestration/- Upload data to Snowflake
+
+2. Create a feature branch
+
+3. Make your changes│   └── dagster/- Run dbt transformations
+
+4. Test thoroughly (dbt run && dbt test)
+
+5. Submit a pull request│       └── worldbank_pipeline.py     # Dagster orchestration- Create staging views, dimension tables, and fact tables
+
+
+
+## 📝 License│
+
+
+
+This project is for educational purposes.├── data/## 📁 Project Structure
+
+
+
+## 🙏 Acknowledgments│   └── gtfs_data.ndjson         # Sample data files
+
+
+
+- **World Bank Open Data** - Development indicators API│```
+
+- **Snowflake** - Cloud data warehousing
+
+- **dbt** - SQL-based transformations└── venv/                        # Python virtual environment (active)Data-Exploration-Preparation-and-Visualization-final-project/
+
+- **Dagster** - Modern data orchestration
+
+```├── scripts/
+
+│   ├── provision_snowflake.py      # Snowflake DDL automation
+
+## 📊 Data Pipeline Details│   ├── generate_mock_openaq.py     # Mock data generator
+
+│   ├── upload_mock_data.py         # Snowflake data uploader
+
+### Data Fetched│   └── run_full_pipeline.py        # Complete pipeline automation
+
+├── dbt/
+
+- **7 Indicators**: Population, GDP, Life Expectancy, Infant Mortality, Literacy Rate, CO2 Emissions, Access to Electricity│   ├── models/
+
+- **7 Countries**: Egypt, Saudi Arabia, UAE, Jordan, Nigeria, South Africa, Kenya│   │   ├── staging/
+
+- **Time Range**: 2010-2023│   │   │   └── stg_openaq.sql      # Staging model
+
+- **Total Records**: ~600+ measurements│   │   ├── dimensions/
+
+│   │   │   ├── dim_station.sql     # Station dimension
+
+### Snowflake Objects Created│   │   │   └── dim_parameter.sql   # Parameter dimension
+
+│   │   └── marts/
+
+| Object | Schema | Description |│   │       └── fact_aq.sql         # Air quality fact table
+
+|--------|--------|-------------|│   ├── dbt_project.yml
+
+| `WORLDBANK_INDICATORS` | RAW | Raw data table |│   └── profiles.yml                # Located at C:\Users\ahmad\.dbt\profiles.yml
+
+| `STG_WORLDBANK` | RAW_STAGING | Cleaned staging view |├── orchestration/
+
+| `DIM_COUNTRY` | RAW | Country dimension |│   └── dagster/
+
+| `DIM_INDICATOR` | RAW | Indicator dimension |│       └── snowflake_uploader.py   # Dagster pipeline
+
+| `FACT_WORLDBANK` | RAW_MARTS | Analytics fact table |├── data/
+
+│   └── openaq_data.ndjson          # Generated mock data
+
+### dbt Models├── requirements.txt
+
+├── .env                             # Your environment variables
+
+1. **stg_worldbank**: Staging view that filters out null values and standardizes column names└── README.md
+
+2. **dim_country**: Deduplicated country dimension with surrogate keys```
+
+3. **dim_indicator**: Deduplicated indicator dimension with metadata
+
+4. **fact_worldbank**: Main fact table for analysis with all measurements## 🔧 Components
+
+
+
+## 🔧 Dagster Pipeline### Snowflake Objects
+
+
+
+The Dagster pipeline consists of 4 assets that run in sequence:| Object Type | Name | Purpose |
+
 |------------|------|---------|
-| Warehouse | `ANALYTICS_WH` | Compute resources (XSMALL, auto-suspend 60s) |
-| Database | `ANALYTICS_DB` | Container for all schemas and tables |
-| Schema | `RAW` | Raw ingestion layer |
-| Schema | `RAW_staging` | Staging layer for transformations |
+
+1. **fetch_worldbank_data**: Fetches data from World Bank API| Warehouse | `ANALYTICS_WH` | Compute resources (XSMALL, auto-suspend 60s) |
+
+2. **provision_snowflake_objects**: Creates warehouse, database, schemas, and tables| Database | `ANALYTICS_DB` | Container for all schemas and tables |
+
+3. **load_to_snowflake**: Loads data using batch inserts (1000 rows at a time)| Schema | `RAW` | Raw ingestion layer |
+
+4. **run_dbt_models**: Executes dbt transformations| Schema | `RAW_staging` | Staging layer for transformations |
+
 | Schema | `RAW_marts` | Fact and aggregated tables |
-| Table | `OPENAQ_STREAM` | Raw air quality measurements |
 
-### dbt Models
+## 💻 Usage Examples| Table | `OPENAQ_STREAM` | Raw air quality measurements |
 
-1. **`stg_openaq.sql`** (Staging)
-   - Standardizes raw data from `OPENAQ_STREAM` table
-   - Creates view in `RAW_staging` schema
+
+
+### Query the Data in Snowflake### dbt Models
+
+
+
+```sql1. **`stg_openaq.sql`** (Staging)
+
+-- View all countries   - Standardizes raw data from `OPENAQ_STREAM` table
+
+SELECT * FROM ANALYTICS_DB.RAW.DIM_COUNTRY;   - Creates view in `RAW_staging` schema
+
    - All columns use quoted identifiers for case sensitivity
 
-2. **`dim_station.sql`** (Dimension)
-   - Deduplicates monitoring stations
-   - Generates `station_id` using `row_number()`
-   - Columns: `station_id`, `station_name`, `city`, `country`, `latitude`, `longitude`
+-- View all indicators
 
-3. **`dim_parameter.sql`** (Dimension)
-   - Lists unique measurement parameters (PM2.5, NO2, O3, etc.)
-   - Generates `parameter_id` using `row_number()`
-   - Columns: `parameter_id`, `parameter_name`, `unit`
+SELECT * FROM ANALYTICS_DB.RAW.DIM_INDICATOR;2. **`dim_station.sql`** (Dimension)
+
+   - Deduplicates monitoring stations
+
+-- Get GDP trends for Egypt   - Generates `station_id` using `row_number()`
+
+SELECT    - Columns: `station_id`, `station_name`, `city`, `country`, `latitude`, `longitude`
+
+    YEAR,
+
+    VALUE as GDP3. **`dim_parameter.sql`** (Dimension)
+
+FROM ANALYTICS_DB.RAW_MARTS.FACT_WORLDBANK   - Lists unique measurement parameters (PM2.5, NO2, O3, etc.)
+
+WHERE COUNTRY_NAME = 'Egypt'    - Generates `parameter_id` using `row_number()`
+
+  AND INDICATOR_NAME = 'GDP (current US$)'   - Columns: `parameter_id`, `parameter_name`, `unit`
+
+ORDER BY YEAR DESC;
 
 4. **`fact_aq.sql`** (Fact Table)
-   - Contains all air quality measurements
-   - References staging model
-   - Schema: `RAW_marts`
-   - Columns: `measurement_id`, `location`, `city`, `country`, `parameter`, `value`, `unit`, `latitude`, `longitude`, `measured_at`, `fetched_at`
 
-### Dagster Pipeline
+-- Compare life expectancy across countries in 2023   - Contains all air quality measurements
 
-Located in `orchestration/dagster/snowflake_uploader.py`:
+SELECT    - References staging model
+
+    COUNTRY_NAME,   - Schema: `RAW_marts`
+
+    VALUE as LIFE_EXPECTANCY   - Columns: `measurement_id`, `location`, `city`, `country`, `parameter`, `value`, `unit`, `latitude`, `longitude`, `measured_at`, `fetched_at`
+
+FROM ANALYTICS_DB.RAW_MARTS.FACT_WORLDBANK
+
+WHERE INDICATOR_NAME = 'Life expectancy at birth, total (years)'### Dagster Pipeline
+
+  AND YEAR = 2023
+
+ORDER BY VALUE DESC;Located in `orchestration/dagster/snowflake_uploader.py`:
+
+```
 
 - **Job**: `openaq_snowflake_pipeline`
-- **Ops**:
+
+## 🐛 Troubleshooting- **Ops**:
+
   - `check_raw_data` - Verifies NDJSON file exists
-  - `stage_openaq_file` - Stages file for Snowflake (PUT command)
+
+### Dagster won't start  - `stage_openaq_file` - Stages file for Snowflake (PUT command)
+
   - `upload_openaq_to_snowflake` - Copies staged data into table
-  - `verify_upload` - Confirms row count matches
 
-## 📊 Data Schema
+Make sure the password is set in your `.env` file and run:  - `verify_upload` - Confirms row count matches
 
-The `OPENAQ_STREAM` table contains the following columns:
 
-| Column | Type | Description |
+
+```bash## 📊 Data Schema
+
+dagster dev -f orchestration/dagster/worldbank_pipeline.py
+
+```The `OPENAQ_STREAM` table contains the following columns:
+
+
+
+### dbt errors about column names| Column | Type | Description |
+
 |--------|------|-------------|
-| `measurement_id` | NUMBER | Unique measurement identifier |
+
+Snowflake column names are case-sensitive. All column references in dbt models use UPPERCASE (e.g., `COUNTRY_ID`, `YEAR`, `VALUE`).| `measurement_id` | NUMBER | Unique measurement identifier |
+
 | `location` | VARCHAR | Station location name |
-| `city` | VARCHAR | City name |
+
+### Snowflake connection issues| `city` | VARCHAR | City name |
+
 | `country` | VARCHAR | Country code |
-| `parameter` | VARCHAR | Pollutant type (PM2.5, NO2, O3, etc.) |
+
+Verify your `.env` file has the correct:| `parameter` | VARCHAR | Pollutant type (PM2.5, NO2, O3, etc.) |
+
 | `value` | FLOAT | Measurement value |
-| `unit` | VARCHAR | Unit of measurement (µg/m³, ppm) |
-| `latitude` | FLOAT | Station latitude |
-| `longitude` | FLOAT | Station longitude |
+
+- Account identifier (format: `account.region`)| `unit` | VARCHAR | Unit of measurement (µg/m³, ppm) |
+
+- Username and password| `latitude` | FLOAT | Station latitude |
+
+- Role with sufficient permissions| `longitude` | FLOAT | Station longitude |
+
 | `measured_at` | TIMESTAMP_NTZ | Measurement timestamp |
-| `fetched_at` | TIMESTAMP_NTZ | Data retrieval timestamp |
 
-## 💻 Usage
+### Python package errors| `fetched_at` | TIMESTAMP_NTZ | Data retrieval timestamp |
 
-### Manual Step-by-Step Execution
 
-```bash
-# 1. Provision Snowflake objects
+
+Make sure you're using the correct virtual environment:## 💻 Usage
+
+
+
+```bash### Manual Step-by-Step Execution
+
+# Activate venv
+
+venv\Scripts\activate  # Windows```bash
+
+# source venv/bin/activate  # macOS/Linux# 1. Provision Snowflake objects
+
 python scripts/provision_snowflake.py
 
-# 2. Generate mock data
-python scripts/generate_mock_openaq.py
+# Reinstall packages if needed
 
-# 3. Upload data to Snowflake
+pip install -r requirements.txt# 2. Generate mock data
+
+```python scripts/generate_mock_openaq.py
+
+
+
+## 🔑 Environment Variables# 3. Upload data to Snowflake
+
 python scripts/upload_mock_data.py
 
-# 4. Run dbt transformations
-cd dbt
-dbt run
-dbt test
-```
+| Variable | Description | Example |
 
-### Automated Execution
+|----------|-------------|---------|# 4. Run dbt transformations
+
+| `SNOWFLAKE_ACCOUNT` | Account identifier | `POKMPXO-ICB41863` |cd dbt
+
+| `SNOWFLAKE_USER` | Username | `AHMEDEHAB` |dbt run
+
+| `SNOWFLAKE_PASSWORD` | Password | `your_secure_password` |dbt test
+
+| `SNOWFLAKE_ROLE` | Role | `ACCOUNTADMIN` |```
+
+| `SNOWFLAKE_WAREHOUSE` | Warehouse name | `ANALYTICS_WH` |
+
+| `SNOWFLAKE_DATABASE` | Database name | `ANALYTICS_DB` |### Automated Execution
+
+| `SNOWFLAKE_SCHEMA` | Default schema | `RAW` |
 
 ```bash
-# Run entire pipeline with one command
+
+## 📈 Next Steps# Run entire pipeline with one command
+
 python scripts/run_full_pipeline.py
-```
 
-### Query Transformed Data
+- **Add Scheduling**: Use Dagster sensors or schedules to run the pipeline automatically```
 
-Connect to Snowflake and run:
+- **Add More Indicators**: Extend the indicator list in the notebook
 
-```sql
+- **Create Visualizations**: Connect Power BI or Tableau to Snowflake for dashboards### Query Transformed Data
+
+- **Add Data Quality Checks**: Implement custom dbt tests for business rules
+
+- **Add CI/CD**: Set up GitHub Actions to test dbt models on each commitConnect to Snowflake and run:
+
+
+
+## 🤝 Contributing```sql
+
 -- View all air quality measurements
-SELECT * FROM ANALYTICS_DB.RAW_marts.FACT_AQ LIMIT 10;
 
--- View stations
-SELECT * FROM ANALYTICS_DB.RAW.DIM_STATION;
+Contributions are welcome! Please:SELECT * FROM ANALYTICS_DB.RAW_marts.FACT_AQ LIMIT 10;
 
--- View parameters
-SELECT * FROM ANALYTICS_DB.RAW.DIM_PARAMETER;
 
--- Average PM2.5 by city
+
+1. Fork the repository-- View stations
+
+2. Create a feature branchSELECT * FROM ANALYTICS_DB.RAW.DIM_STATION;
+
+3. Make your changes
+
+4. Test thoroughly (run dbt and Dagster)-- View parameters
+
+5. Submit a pull requestSELECT * FROM ANALYTICS_DB.RAW.DIM_PARAMETER;
+
+
+
+## 📝 License-- Average PM2.5 by city
+
 SELECT 
-    "city",
+
+This project is for educational purposes.    "city",
+
     AVG("value") as avg_pm25
-FROM ANALYTICS_DB.RAW_marts.FACT_AQ
+
+## 🙏 AcknowledgmentsFROM ANALYTICS_DB.RAW_marts.FACT_AQ
+
 WHERE "parameter" = 'pm25'
-GROUP BY "city"
-ORDER BY avg_pm25 DESC;
-```
+
+- **World Bank Open Data** for providing free development indicatorsGROUP BY "city"
+
+- **Snowflake** for cloud data warehousingORDER BY avg_pm25 DESC;
+
+- **dbt** for SQL-based transformations```
+
+- **Dagster** for modern data orchestration
 
 ## 📈 Power BI Integration
 

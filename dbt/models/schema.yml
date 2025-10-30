@@ -1,116 +1,91 @@
 version: 2
 
 sources:
-  - name: gtfs_raw
+  - name: worldbank_raw
     database: ANALYTICS_DB
     schema: RAW
     tables:
-      - name: gtfs_trips
-        identifier: GTFS_TRIPS
-        description: "Raw GTFS transit trip data from Cairo Metro"
+      - name: worldbank_indicators
+        identifier: WORLDBANK_INDICATORS
+        description: "Raw World Bank development indicators data"
 
 models:
-  - name: stg_gtfs
-    description: "Staging model for GTFS transit trip data"
+  - name: stg_worldbank
+    description: "Staging model for World Bank indicators data"
     columns:
-      - name: trip_id
-        description: "Unique trip identifier"
+      - name: record_id
+        description: "Unique record identifier"
         tests:
           - not_null
           - unique
-      - name: route_id
-        description: "Route identifier (L1, L2, L3)"
+      - name: indicator_id
+        description: "World Bank indicator code"
         tests:
           - not_null
-      - name: trip_date
-        description: "Date of the trip"
+      - name: country_id
+        description: "ISO country code"
         tests:
           - not_null
-      - name: ridership
-        description: "Number of passengers"
+      - name: year
+        description: "Year of measurement"
         tests:
           - not_null
-          
-  - name: dim_route
-    description: "Dimension table of Metro routes (Lines 1, 2, 3)"
+      - name: value
+        description: "Indicator value"
+        tests:
+          - not_null
+
+  - name: dim_country
+    description: "Dimension table of countries"
     columns:
-      - name: route_pk
-        description: "Surrogate key for routes"
+      - name: country_pk
+        description: "Surrogate key for countries"
         tests:
           - not_null
           - unique
-      - name: route_id
-        description: "Natural key (L1, L2, L3)"
+      - name: country_id
+        description: "ISO country code"
         tests:
           - not_null
           - unique
-          
-  - name: dim_stop
-    description: "Dimension table of Metro stations/stops"
+
+  - name: dim_indicator
+    description: "Dimension table of World Bank indicators"
     columns:
-      - name: stop_pk
-        description: "Surrogate key for stops"
+      - name: indicator_pk
+        description: "Surrogate key for indicators"
         tests:
           - not_null
           - unique
-      - name: stop_id
-        description: "Natural key (stop identifier)"
+      - name: indicator_id
+        description: "World Bank indicator code"
         tests:
           - not_null
           - unique
-      - name: stop_name
-        description: "Station name"
-        tests:
-          - not_null
-          
-  - name: dim_service
-    description: "Dimension table of service types (weekday, saturday, sunday)"
+
+  - name: fact_worldbank
+    description: "Fact table of World Bank measurements"
     columns:
-      - name: service_pk
-        description: "Surrogate key for service types"
+      - name: record_id
+        description: "Unique record identifier"
         tests:
           - not_null
           - unique
-      - name: service_type
-        description: "Service type identifier"
-        tests:
-          - not_null
-          - unique
-          
-  - name: fact_trips
-    description: "Fact table of transit trips with ridership and performance metrics"
-    columns:
-      - name: trip_id
-        description: "Unique trip identifier"
-        tests:
-          - not_null
-          - unique
-      - name: route_id
-        description: "Foreign key to dim_route"
+      - name: country_id
+        description: "Foreign key to dim_country"
         tests:
           - not_null
           - relationships:
-              to: ref('dim_route')
-              field: route_id
-      - name: origin_stop_id
-        description: "Foreign key to dim_stop (origin)"
+              to: ref('dim_country')
+              field: country_id
+      - name: indicator_id
+        description: "Foreign key to dim_indicator"
         tests:
           - not_null
           - relationships:
-              to: ref('dim_stop')
-              field: stop_id
-      - name: destination_stop_id
-        description: "Foreign key to dim_stop (destination)"
-        tests:
-          - not_null
-          - relationships:
-              to: ref('dim_stop')
-              field: stop_id
-      - name: ridership
-        description: "Number of passengers"
-        tests:
-          - not_null
-      - name: delay_minutes
-        description: "Delay in minutes"
+              to: ref('dim_indicator')
+              field: indicator_id
+      - name: value
+        description: "Measurement value"
         tests:
           - not_null
